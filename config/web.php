@@ -17,6 +17,22 @@ $config = [
             'cookieValidationKey' => 'KN2wxKP3xNrYbBwaoR0blsANTj8KMENH',
             'baseUrl' => '',
         ],
+        'assetManager' => [
+            'class' => 'yii\web\AssetManager',
+            'appendTimestamp' => true,
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'js'=>[]
+                ],
+                'yii\bootstrap\BootstrapPluginAsset' => [
+                    'js'=>[]
+                ],
+                'yii\bootstrap\BootstrapAsset' => [
+                    'css' => [],
+                ],
+
+            ],
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -48,6 +64,9 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                [
+                    'class' => 'app\components\UrlRule',
+                ],
             ],
         ],
     ],
