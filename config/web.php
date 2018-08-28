@@ -21,9 +21,9 @@ $config = [
             'class' => 'yii\web\AssetManager',
             'appendTimestamp' => true,
             'bundles' => [
-                'yii\web\JqueryAsset' => [
-                    'js'=>[]
-                ],
+//                'yii\web\JqueryAsset' => [
+//                    'js'=>[]
+//                ],
                 'yii\bootstrap\BootstrapPluginAsset' => [
                     'js'=>[]
                 ],
