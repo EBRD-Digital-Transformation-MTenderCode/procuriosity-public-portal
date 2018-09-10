@@ -64,6 +64,8 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'search/budgets' => 'search/budgets',
+                'search/tenders' => 'search/tenders',
                 [
                     'class' => 'app\components\UrlRule',
                 ],
