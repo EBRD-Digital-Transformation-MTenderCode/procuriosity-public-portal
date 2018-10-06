@@ -11,5 +11,3 @@ chmod -R 777 /var/run/php-fpm
 
 #/bin/bash
 /usr/sbin/nginx -g 'daemon off;'
-#cd /var/www/service
-#./yii budgets/get-changed-list

@@ -1,7 +1,5 @@
 FROM eprocurementsystems/php-base
-#COPY / /var/www/service/
-COPY . /var/www/service/
-
+COPY /src /var/www/service/
 COPY /nginx.conf /etc/nginx/nginx.conf
 COPY /www.conf /etc/php-fpm.d/www.conf
 COPY /run.sh /bin/run.sh
