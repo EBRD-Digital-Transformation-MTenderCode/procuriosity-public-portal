@@ -45,6 +45,8 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'params' => 'params/index',
+
                 'search/budgets' => 'search/budgets',
                 'search/tenders' => 'search/tenders',
                 [
