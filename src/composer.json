@@ -36,6 +36,10 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "git",
+            "url": "https://pbox-reader@bitbucket.org/ustudio-llc/service_mandatory_parts-composer_package.git"
         }
     ]
 }
