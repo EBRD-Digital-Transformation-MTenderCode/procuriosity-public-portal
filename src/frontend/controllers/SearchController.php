@@ -57,9 +57,7 @@ class SearchController extends Controller
         $response = Yii::$app->response;
         $response->format = Response::FORMAT_JSON;
         $result = Curl::sendRequest($requestUrl . $queryString, "GET") ;
-        if ($result['code'] == 200) {
-            $response->content = $result['body'];
-        }
+        $response->content = $result['body'];
         return $response;
     }
 
@@ -77,9 +75,7 @@ class SearchController extends Controller
         $response = Yii::$app->response;
         $response->format = Response::FORMAT_JSON;
         $result = Curl::sendRequest($requestUrl . $queryString, "GET") ;
-        if ($result['code'] == 200) {
-            $response->content = $result['body'];
-        }
+        $response->content = $result['body'];
         return $response;
     }
 
@@ -97,9 +93,7 @@ class SearchController extends Controller
         $response = Yii::$app->response;
         $response->format = Response::FORMAT_JSON;
         $result = Curl::sendRequest($requestUrl . $queryString, "GET") ;
-        if ($result['code'] == 200) {
-            $response->content = $result['body'];
-        }
+        $response->content = $result['body'];
         return $response;
     }
 
@@ -117,9 +111,7 @@ class SearchController extends Controller
         $response = Yii::$app->response;
         $response->format = Response::FORMAT_JSON;
         $result = Curl::sendRequest($requestUrl . $queryString, "GET") ;
-        if ($result['code'] == 200) {
-            $response->content = $result['body'];
-        }
+        $response->content = $result['body'];
         return $response;
     }
 
