@@ -47,8 +47,8 @@ return [
             'rules' => [
                 'params' => 'params/index',
 
-                'search/budgets' => 'search/budgets',
-                'search/tenders' => 'search/tenders',
+                'search/<action:\w+>' => 'search/<action>',
+
                 [
                     'class' => 'common\components\UrlRule',
                 ],
