@@ -57,9 +57,61 @@ class SearchController extends Controller
         $response = Yii::$app->response;
         $response->format = Response::FORMAT_JSON;
         $result = Curl::sendRequest($requestUrl . $queryString, "GET") ;
-        if ($result['code'] == 200) {
-            $response->content = $result['body'];
-        }
+        $response->content = $result['body'];
+        return $response;
+    }
+
+    /**
+     * @return \yii\console\Response|Response
+     * @throws \yii\web\HttpException
+     */
+    public function actionContracts()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $requestUrl = Yii::$app->params['elastic_service_url'] . '/rest-api/v1/contracts/search';
+        $queryString = Yii::$app->request->getQueryString();
+        $queryString = $queryString ? "?" . $queryString : "";
+
+        $response = Yii::$app->response;
+        $response->format = Response::FORMAT_JSON;
+        $result = Curl::sendRequest($requestUrl . $queryString, "GET") ;
+        $response->content = $result['body'];
+        return $response;
+    }
+
+    /**
+     * @return \yii\console\Response|Response
+     * @throws \yii\web\HttpException
+     */
+    public function actionPlans()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $requestUrl = Yii::$app->params['elastic_service_url'] . '/rest-api/v1/plans/search';
+        $queryString = Yii::$app->request->getQueryString();
+        $queryString = $queryString ? "?" . $queryString : "";
+
+        $response = Yii::$app->response;
+        $response->format = Response::FORMAT_JSON;
+        $result = Curl::sendRequest($requestUrl . $queryString, "GET") ;
+        $response->content = $result['body'];
+        return $response;
+    }
+
+    /**
+     * @return \yii\console\Response|Response
+     * @throws \yii\web\HttpException
+     */
+    public function actionCpv()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $requestUrl = Yii::$app->params['elastic_service_url'] . '/rest-api/v1/cpv/search';
+        $queryString = Yii::$app->request->getQueryString();
+        $queryString = $queryString ? "?" . $queryString : "";
+
+        $response = Yii::$app->response;
+        $response->format = Response::FORMAT_JSON;
+        $result = Curl::sendRequest($requestUrl . $queryString, "GET") ;
+        $response->content = $result['body'];
         return $response;
     }
 
