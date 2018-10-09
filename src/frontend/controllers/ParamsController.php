@@ -14,7 +14,8 @@ class ParamsController extends Controller
         Yii::$app->response->format = Response::FORMAT_JSON;
 
         return [
-            'elastic_service_url' => Yii::$app->params['elastic_service_url']
+            'elastic_service_url' => Yii::$app->params['elastic_service_url'],
+            'public_url' => Yii::$app->params['public_url']
         ];
     }
 }
