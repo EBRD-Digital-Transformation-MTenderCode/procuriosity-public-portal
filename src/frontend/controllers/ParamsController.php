@@ -8,6 +8,20 @@ use yii\web\Response;
 
 class ParamsController extends Controller
 {
+    public function behaviors()
+    {
+        return [
+            'corsFilter' => [
+                'class' => \yii\filters\Cors::className(),
+                'cors' => [
+                    'Origin' => ['*'],
+                    'Access-Control-Request-Method' => ['GET'],
+                    'Access-Control-Max-Age' => 3600,
+                ],
+
+            ],
+        ];
+    }
 
     public function actionIndex()
     {
