@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use Yii;
 use common\models\Curl;
 use yii\web\Controller;
+use yii\web\Response;
 
 class PublicController extends Controller
 {
@@ -36,12 +37,13 @@ class PublicController extends Controller
     public function actionIndex($url)
     {
         $requestUrl = Yii::$app->params['public_url'] . $url;
+        $response = Yii::$app->response;
+        $response->format = Response::FORMAT_JSON;
         $result = Curl::sendRequest($requestUrl . '', "GET") ;
         if ($result['code'] == 200) {
-            header('Content-Type: application/json');
-            exit($result['body']);
+            $response->content = $result['body'];
         }
-        return null;
+        return $response;
 
     }
 
