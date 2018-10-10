@@ -9,6 +9,10 @@ use yii\web\Response;
 
 class SearchController extends Controller
 {
+    /**
+     * @todo УДАЛИТЬ!!!!
+     * @return array
+     */
     public function behaviors()
     {
         return [
