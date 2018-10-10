@@ -46,7 +46,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 'params' => 'params/index',
-
+                'public/<action:\w+>/<url:\w+>' => 'public/index',
                 'search/<action:\w+>' => 'search/<action>',
 
                 [
