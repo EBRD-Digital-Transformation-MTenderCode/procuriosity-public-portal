@@ -46,7 +46,6 @@ return [
             'showScriptName' => false,
             'rules' => [
                 'params' => 'params/index',
-
                 'search/<action:\w+>' => 'search/<action>',
 
                 [
