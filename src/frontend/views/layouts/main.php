@@ -33,7 +33,7 @@ AppAsset::register($this);
 
 <?php $this->endBody() ?>
 <script src=/js/chunk-vendors.84347596.js></script>
-<script src=/js/app.3fcebbd4.js></script>
+<script src=/js/app.4f25b277.js></script>
 </body>
 </html>
 <?php $this->endPage() ?>
