@@ -3,9 +3,8 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use yii\helpers\Html;
 use frontend\assets\AppAsset;
-use yii\helpers\Url;
+use frontend\models\File;
 
 AppAsset::register($this);
 ?>
@@ -18,6 +17,14 @@ AppAsset::register($this);
     <meta name=viewport content="width=device-width,initial-scale=1">
     <link rel=icon href=/favicon.ico>
     <title>M Tender Public Portal</title>
+    <link href='<?= File::getNameWithCreatedTime('/css/List.css')?>' rel=prefetch>
+    <link href='<?= File::getNameWithCreatedTime('/css/app.css')?>' rel=preload as=style>
+    <link href='<?= File::getNameWithCreatedTime('/css/chunk-vendors.css')?>' rel=preload as=style>
+    <link href='<?= File::getNameWithCreatedTime('/css/chunk-vendors.css')?>' rel=stylesheet>
+    <link href='<?= File::getNameWithCreatedTime('/css/app.css')?>' rel=stylesheet>
+    <link href='<?= File::getNameWithCreatedTime('/js/List.js')?>' rel=prefetch>
+    <link href='<?= File::getNameWithCreatedTime('/js/app.js')?>' rel=preload as=script>
+    <link href='<?= File::getNameWithCreatedTime('/js/chunk-vendors.js')?>' rel=preload as=script>
     <?php $this->head() ?>
 </head>
 <body>
@@ -26,6 +33,8 @@ AppAsset::register($this);
     <?= $content ?>
 
 <?php $this->endBody() ?>
+<script src='<?= File::getNameWithCreatedTime('/js/chunk-vendors.js')?>'></script>
+<script src='<?= File::getNameWithCreatedTime('/js/app.js')?>'></script>
 </body>
 </html>
 <?php $this->endPage() ?>
