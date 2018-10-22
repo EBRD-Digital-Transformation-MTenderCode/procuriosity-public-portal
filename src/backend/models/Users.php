@@ -30,7 +30,7 @@ class Users extends User
             ['email', 'string', 'max' => 255],
             ['email', 'unique', 'message' => 'This email address has already been taken.'],
 
-            ['password', 'required'],
+            ['password', 'required', 'on' => ['create']],
             ['password', 'string', 'min' => 6],
             ['password_repeat', 'compare', 'compareAttribute'=>'password', 'skipOnEmpty' => false, 'message'=>"Passwords don't match"],
 
@@ -45,9 +45,10 @@ class Users extends User
      */
     public function beforeSave($insert)
     {
-
-        $this->setPassword($this->password);
-        $this->generateAuthKey();
+        if(!empty($this->password)) {
+            $this->setPassword($this->password);
+            $this->generateAuthKey();
+        }
 
         return parent::beforeSave($insert);
     }
