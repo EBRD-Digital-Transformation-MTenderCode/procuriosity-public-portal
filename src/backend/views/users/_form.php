@@ -16,9 +16,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'password')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'password')->textInput(['maxlength' => true])->passwordInput() ?>
 
-    <?= $form->field($model, 'password_repeat')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'password_repeat')->textInput(['maxlength' => true])->passwordInput() ?>
 
 
     <?= $form->field($model, 'role')->dropDownList(
