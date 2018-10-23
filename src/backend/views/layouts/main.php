@@ -66,8 +66,9 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                             [
                                 "items" => [
                                     ["label" => "Home", "url" => "/", "icon" => "home"],
-                                    ["label" => "User Roles", "url" => ["roles/index"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
-                                    ["label" => "Users", "url" => ["users/index"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
+                                    ["label" => "User Roles", "url" => ["/roles/index"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
+                                    ["label" => "Users", "url" => ["/users/index"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
+                                    ["label" => "I18n translates", "url" => ["/i18n"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
                                     ["label" => "Error page", "url" => ["site/error-page"], "icon" => "close"],
                                     [
                                         "label" => "Widgets",

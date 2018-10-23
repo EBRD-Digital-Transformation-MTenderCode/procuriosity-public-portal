@@ -12,5 +12,14 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'i18n' => [
+            'class'=> common\modules\i18n\components\I18N::className(),
+            'languages' => ['ro', 'en', 'ru'],
+            'translations' => [
+                'app/site' => [
+                    'class' => yii\i18n\DbMessageSource::className()
+                ],
+            ],
+        ],
     ],
 ];
