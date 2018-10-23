@@ -19,6 +19,7 @@ class ComposerStaticInitb449bd39e86818b280f9cf2f00029bc4
     public static $prefixLengthsPsr4 = array (
         'y' => 
         array (
+            'yiister\\gentelella\\' => 19,
             'yii\\swiftmailer\\' => 16,
             'yii\\httpclient\\' => 15,
             'yii\\gii\\' => 8,
@@ -31,6 +32,10 @@ class ComposerStaticInitb449bd39e86818b280f9cf2f00029bc4
         'u' => 
         array (
             'ustudio\\service_mandatory\\' => 26,
+        ),
+        'r' => 
+        array (
+            'rmrevin\\yii\\fontawesome\\' => 24,
         ),
         'p' => 
         array (
@@ -86,6 +91,10 @@ class ComposerStaticInitb449bd39e86818b280f9cf2f00029bc4
     );
 
     public static $prefixDirsPsr4 = array (
+        'yiister\\gentelella\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiister/yii2-gentelella',
+        ),
         'yii\\swiftmailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer/src',
@@ -121,6 +130,10 @@ class ComposerStaticInitb449bd39e86818b280f9cf2f00029bc4
         'ustudio\\service_mandatory\\' => 
         array (
             0 => __DIR__ . '/..' . '/ustudio/service_mandatory',
+        ),
+        'rmrevin\\yii\\fontawesome\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rmrevin/yii2-fontawesome',
         ),
         'phpDocumentor\\Reflection\\' => 
         array (
