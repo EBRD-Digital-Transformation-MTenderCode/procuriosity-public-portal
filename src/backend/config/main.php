@@ -36,6 +36,7 @@ return [
             ],
         ],
         'errorHandler' => [
+            'class' => \common\components\ExceptionHandler::className(),
             'errorAction' => 'site/error',
         ],
         'urlManager' => [
