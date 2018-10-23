@@ -4,6 +4,6 @@ php yii migrate
 
 php yii migrate --migrationPath=@yii/rbac/migrations/
 
-php yii role
+php yii admin/create-role
 
-php yii admin
+php yii admin/create-user
