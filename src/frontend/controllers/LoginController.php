@@ -26,12 +26,11 @@ class LoginController extends Controller
 
     /**
      * @return \yii\web\Response
-     * @throws ServiceException
      */
     public function actionIndex()
     {
         $model = new LoginForm();
-        if(Yii::$app->request->isAjax) {
+        if(Yii::$app->request->isAjax && Yii::$app->request->isPost) {
             if ($model->load(Yii::$app->request->post(), '') && $model->login()) {
                 return $this->redirect(['/admin/index']);
             } else {
