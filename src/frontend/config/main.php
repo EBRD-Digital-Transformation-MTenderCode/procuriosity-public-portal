@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-frontend',
+    'language' => 'en',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
@@ -47,6 +48,7 @@ return [
             'rules' => [
                 'params' => 'params/index',
                 'search/<action:\w+>' => 'search/<action>',
+                'page/<slug:\w+>' => 'pages/view',
 
                 [
                     'class' => 'common\components\UrlRule',
