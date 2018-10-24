@@ -45,7 +45,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'params' => 'params/index',
+                //'params' => 'params/index',
                 'search/<action:\w+>' => 'search/<action>',
 
                 [
