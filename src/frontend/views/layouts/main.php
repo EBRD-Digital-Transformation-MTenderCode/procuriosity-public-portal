@@ -34,10 +34,12 @@ AppAsset::register($this);
 
     <title>MTender Public Portal</title>
 
+    <link href='<?= File::getNameWithCreatedTime('/css/About.css')?>' rel=prefetch>
     <link href='<?= File::getNameWithCreatedTime('/css/List.css')?>' rel=prefetch>
     <link href='<?= File::getNameWithCreatedTime('/css/News.css')?>' rel=prefetch>
     <link href='<?= File::getNameWithCreatedTime('/js/About.js')?>' rel=prefetch>
     <link href='<?= File::getNameWithCreatedTime('/js/Accreditation.js')?>' rel=prefetch>
+    <link href='<?= File::getNameWithCreatedTime('/js/ContractPage.js')?>' rel=prefetch>
     <link href='<?= File::getNameWithCreatedTime('/js/FAQ.js')?>' rel=prefetch>
     <link href='<?= File::getNameWithCreatedTime('/js/ForCivil.js')?>' rel=prefetch>
     <link href='<?= File::getNameWithCreatedTime('/js/JoinMTender.js')?>' rel=prefetch>
