@@ -65,68 +65,12 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                         \yiister\gentelella\widgets\Menu::widget(
                             [
                                 "items" => [
-                                    ["label" => "Home", "url" => "/", "icon" => "home"],
-                                    ["label" => "User Roles", "url" => ["roles/index"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
-                                    ["label" => "Users", "url" => ["users/index"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
-                                    ["label" => "Error page", "url" => ["site/error-page"], "icon" => "close"],
-                                    [
-                                        "label" => "Widgets",
-                                        "icon" => "th",
-                                        "url" => "#",
-                                        "items" => [
-                                            ["label" => "Menu", "url" => ["site/menu"]],
-                                            ["label" => "Panel", "url" => ["site/panel"]],
-                                        ],
-                                    ],
-                                    [
-                                        "label" => "Badges",
-                                        "url" => "#",
-                                        "icon" => "table",
-                                        "items" => [
-                                            [
-                                                "label" => "Default",
-                                                "url" => "#",
-                                                "badge" => "123",
-                                            ],
-                                            [
-                                                "label" => "Success",
-                                                "url" => "#",
-                                                "badge" => "new",
-                                                "badgeOptions" => ["class" => "label-success"],
-                                            ],
-                                            [
-                                                "label" => "Danger",
-                                                "url" => "#",
-                                                "badge" => "!",
-                                                "badgeOptions" => ["class" => "label-danger"],
-                                            ],
-                                        ],
-                                    ],
-                                    [
-                                        "label" => "Multilevel",
-                                        "url" => "#",
-                                        "icon" => "table",
-                                        "items" => [
-                                            [
-                                                "label" => "Second level 1",
-                                                "url" => "#",
-                                            ],
-                                            [
-                                                "label" => "Second level 2",
-                                                "url" => "#",
-                                                "items" => [
-                                                    [
-                                                        "label" => "Third level 1",
-                                                        "url" => "#",
-                                                    ],
-                                                    [
-                                                        "label" => "Third level 2",
-                                                        "url" => "#",
-                                                    ],
-                                                ],
-                                            ],
-                                        ],
-                                    ],
+                                    ["label" => "Home", "url" => ["/"], "icon" => "home"],
+                                    ["label" => "User Roles", "url" => ["/roles/index"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
+                                    ["label" => "Users", "url" => ["/users/index"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
+                                    ["label" => "I18n translates", "url" => ["/i18n"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
+                                    ["label" => "Pages", "url" => ["/pages/index"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
+
                                 ],
                             ]
                         )
