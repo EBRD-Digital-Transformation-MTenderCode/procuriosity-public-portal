@@ -13,11 +13,11 @@ use mihaildev\ckeditor\CKEditor;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'title_ro')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'slug')->widget(\heggi\slugwidget\SlugWidget::className(), ['title' => 'title_en']) ?>
 
     <?= $form->field($model, 'title_en')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'title_ro')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'title_ru')->textInput(['maxlength' => true]) ?>
 

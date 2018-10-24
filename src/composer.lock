@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2cfbbeedbc9496d2545059737b42126",
+    "content-hash": "b1a9ddc05bbd4de091e9bcdfbad3ba3b",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -100,6 +100,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bestiejs/punycode.js/zipball/38c8d3131a82567bfef18da09f7f4db68c84f8a3",
                 "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3",
+                "shasum": null
+            },
+            "type": "bower-asset"
+        },
+        {
+            "name": "bower-asset/speakingurl",
+            "version": "v13.0.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:pid/speakingurl.git",
+                "reference": "31c5b7ce85a69a7721acd090f73235c97890a4a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pid/speakingurl/zipball/31c5b7ce85a69a7721acd090f73235c97890a4a9",
+                "reference": "31c5b7ce85a69a7721acd090f73235c97890a4a9",
                 "shasum": null
             },
             "type": "bower-asset"
@@ -391,6 +407,48 @@
                 "icon"
             ],
             "time": "2016-10-24T15:52:54+00:00"
+        },
+        {
+            "name": "heggi/yii2-slugwidget",
+            "version": "v0.1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heggi/yii2-slugwidget.git",
+                "reference": "1326153f4d203f94bf5544d274920d195ee9eb35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heggi/yii2-slugwidget/zipball/1326153f4d203f94bf5544d274920d195ee9eb35",
+                "reference": "1326153f4d203f94bf5544d274920d195ee9eb35",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/speakingurl": "^13.0",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "heggi\\slugwidget\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Heggi",
+                    "email": "heggi@fhead.org"
+                }
+            ],
+            "description": "Widget for autogeneration slug",
+            "keywords": [
+                "slug",
+                "widget",
+                "yii2"
+            ],
+            "time": "2017-07-06T15:34:29+00:00"
         },
         {
             "name": "mihaildev/yii2-ckeditor",

@@ -17,8 +17,8 @@ class m181024_081936_pages extends Migration
             [
                 'id' => $this->primaryKey(),
                 'slug' => $this->string(255)->notNull()->unique(),
-                'title_ro' => $this->string(255)->notNull(),
-                'title_en' => $this->string(255)->null(),
+                'title_ro' => $this->string(255)->null(),
+                'title_en' => $this->string(255)->notNull(),
                 'title_ru' => $this->string(255)->null(),
                 'body_ro' => $this->text()->null(),
                 'body_en' => $this->text()->null(),
