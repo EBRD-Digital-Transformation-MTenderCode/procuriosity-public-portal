@@ -2,7 +2,7 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
+use yii\helpers\Html;
 use frontend\assets\AppAsset;
 use frontend\models\File;
 
@@ -32,7 +32,7 @@ AppAsset::register($this);
     <meta name=msapplication-TileColor content=#ffffff>
     <meta name=theme-color content=#ffffff>
 
-    <title>MTender Public Portal - <?= Yii::$app->params['title']?></title>
+    <title>MTender Public Portal - <?= Html::encode($this->title) ?></title>
 
     <?php $this->head() ?>
 </head>

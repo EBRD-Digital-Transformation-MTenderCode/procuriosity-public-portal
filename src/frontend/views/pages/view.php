@@ -1,5 +1,6 @@
 <?php
-Yii::$app->params['title'] = $model->metaTitle;
+$this->title = $model->metaTitle;
+$this->registerMetaTag(['name' => 'description', 'content' => $model->metaDescription]);
 ?>
 
 <h1><?=$model->title?></h1>

@@ -7,6 +7,7 @@ use mihaildev\ckeditor\CKEditor;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Pages */
 /* @var $form yii\widgets\ActiveForm */
+$this->registerJs("$('.unlockslug').text('change');", yii\web\View::POS_READY);
 ?>
 
 <div class="pages-form">
