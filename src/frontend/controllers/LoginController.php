@@ -14,6 +14,16 @@ class LoginController extends Controller
 {
     public $enableCsrfValidation = false;
 
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => 'yii\filters\AjaxFilter',
+                'only' => ['index']
+            ],
+        ];
+    }
+
     /**
      * @return \yii\web\Response
      * @throws ServiceException
