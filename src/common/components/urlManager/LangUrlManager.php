@@ -7,7 +7,7 @@ use Yii;
 
 class LangUrlManager extends UrlManager
 {
-    public $lang = 'en';
+    public $lang = 'ro';
     public $langParam = 'language';
     public $languages;
 
