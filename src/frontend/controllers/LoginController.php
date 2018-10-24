@@ -1,8 +1,7 @@
 <?php
-namespace backend\controllers;
+namespace frontend\controllers;
 
 use Yii;
-use ustudio\service_mandatory\ExceptionHandler;
 use ustudio\service_mandatory\ServiceException;
 use yii\web\Controller;
 use common\models\LoginForm;
@@ -24,11 +23,12 @@ class LoginController extends Controller
         $model = new LoginForm();
         if(Yii::$app->request->isAjax) {
             if ($model->load(Yii::$app->request->post(), '') && $model->login()) {
-                return $this->redirect(['index']);
+                return $this->redirect(['/admin/index']);
             } else {
-                throw new ServiceException('Data Validation Failed.', 400, [
+                $e = new ServiceException('Data Validation Failed.', 400, [
                     'model_errors' => $model->getErrors(),
                 ]);
+                $e->dies();
             }
         }
     }
