@@ -16,6 +16,7 @@ return [
         'request' => [
             'csrfParam' => '_csrf-frontend',
             'baseUrl' => '',
+            'class' => 'common\components\urlManager\LangRequest',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -45,10 +46,12 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'class'=>'common\components\urlManager\LangUrlManager',
+            'languages' => ['ro', 'en', 'ru'],
             'rules' => [
                 'params' => 'params/index',
                 'search/<action:\w+>' => 'search/<action>',
-                'page/<slug:\w+>' => 'pages/view',
+                'page/<slug:[\-\w]+>' => 'pages/view',
 
                 [
                     'class' => 'common\components\UrlRule',

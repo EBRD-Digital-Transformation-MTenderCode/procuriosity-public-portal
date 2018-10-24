@@ -19,7 +19,7 @@ Class Pages extends ActiveRecord
 
     public function getBody()
     {
-        $var = "title_" . Yii::$app->language;
+        $var = "body_" . Yii::$app->language;
         return $this->{$var};
     }
 
