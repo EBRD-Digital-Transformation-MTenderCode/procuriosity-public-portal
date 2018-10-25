@@ -7,21 +7,36 @@ use Yii;
 
 class LangUrlManager extends UrlManager
 {
-    public $lang = 'ro';
-    public $langParam = 'language';
+    private $default_language;
+    public $languageParam = 'language';
     public $languages;
+
+    public function init()
+    {
+        $this->default_language = Yii::$app->language;
+        return parent::init();
+    }
 
     public function createUrl($params = array())
     {
 
-        if (!isset($params[$this->langParam])) {
-            if (Yii::$app->language != $this->lang) {
-                $params[$this->langParam] = Yii::$app->language;
+        if (!isset($params[$this->languageParam])) {
+            if (Yii::$app->language != $this->default_language) {
+                $params[$this->languageParam] = Yii::$app->language;
             }
-        } elseif ($params[$this->langParam] == $this->lang){
-            unset($params[$this->langParam]);
+        } elseif ($params[$this->languageParam] == $this->default_language){
+            unset($params[$this->languageParam]);
         }
 
         return parent::createUrl($params);
+    }
+
+    public function parseRequest($request)
+    {
+        $get = Yii::$app->request->getQueryParams();
+        if (!empty($get[$this->languageParam]) && in_array($get[$this->languageParam], Yii::$app->urlManager->languages)) {
+            Yii::$app->language = $get[$this->languageParam];
+        }
+        return parent::parseRequest($request);
     }
 }

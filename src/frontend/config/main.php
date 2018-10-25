@@ -16,7 +16,6 @@ return [
         'request' => [
             'csrfParam' => '_csrf-frontend',
             'baseUrl' => '',
-            'class' => 'common\components\urlManager\LangRequest',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
