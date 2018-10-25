@@ -34,7 +34,7 @@ class LangUrlManager extends UrlManager
     public function parseRequest($request)
     {
         $get = Yii::$app->request->getQueryParams();
-        if (!empty($get[$this->languageParam]) && in_array($get[$this->languageParam], Yii::$app->urlManager->languages)) {
+        if (!empty($get[$this->languageParam]) && in_array($get[$this->languageParam], $this->languages)) {
             Yii::$app->language = $get[$this->languageParam];
         }
         return parent::parseRequest($request);
