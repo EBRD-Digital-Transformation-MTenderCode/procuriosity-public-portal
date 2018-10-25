@@ -1,6 +1,6 @@
 <?php
 
-namespace common\components\urlManager;
+namespace common\components;
 
 use yii\web\UrlManager;
 use Yii;

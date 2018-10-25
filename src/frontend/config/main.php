@@ -45,7 +45,7 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'class'=>'common\components\urlManager\LangUrlManager',
+            'class'=>'common\components\LangUrlManager',
             'languages' => ['ro', 'en', 'ru'],
             'rules' => [
                 'params' => 'params/index',
