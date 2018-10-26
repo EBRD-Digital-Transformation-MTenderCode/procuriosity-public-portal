@@ -48,10 +48,13 @@ return [
             'class'=>'common\components\LangUrlManager',
             'languages' => ['ro', 'en', 'ru'],
             'rules' => [
+                [
+                    'class' => 'common\components\PageUrlRule',
+                ],
                 'params' => 'params/index',
                 'login' => 'login/index',
                 'search/<action:\w+>' => 'search/<action>',
-                'page/<slug:[\-\w]+>' => 'pages/view',
+                //'page/<slug:[\-\w]+>' => 'pages/view',
 
                 [
                     'class' => 'common\components\UrlRule',
