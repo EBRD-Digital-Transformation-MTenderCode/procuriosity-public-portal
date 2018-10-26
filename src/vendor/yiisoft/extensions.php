@@ -75,4 +75,22 @@ return array (
       '@yiister/gentelella' => $vendorDir . '/yiister/yii2-gentelella',
     ),
   ),
+  'heggi/yii2-slugwidget' => 
+  array (
+    'name' => 'heggi/yii2-slugwidget',
+    'version' => '0.1.0.1',
+    'alias' => 
+    array (
+      '@heggi/slugwidget' => $vendorDir . '/heggi/yii2-slugwidget',
+    ),
+  ),
+  'mihaildev/yii2-ckeditor' => 
+  array (
+    'name' => 'mihaildev/yii2-ckeditor',
+    'version' => '1.0.1.0',
+    'alias' => 
+    array (
+      '@mihaildev/ckeditor' => $vendorDir . '/mihaildev/yii2-ckeditor',
+    ),
+  ),
 );
