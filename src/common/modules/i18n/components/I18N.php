@@ -69,7 +69,7 @@ class I18N extends \yii\i18n\I18N
      * ['handlerClassName', 'handlerMethodName']
      * ```
      */
-    public $missingTranslationHandler = ['vintage\i18n\Module', 'missingTranslation'];
+    public $missingTranslationHandler = ['common\modules\i18n\Module', 'missingTranslation'];
     /**
      * @var array Message categories which will not be automatically added on MissingTranslationEvent.
      */
