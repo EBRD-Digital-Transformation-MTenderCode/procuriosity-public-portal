@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use yii\helpers\Html;
 use frontend\assets\AppAsset;
 use frontend\models\File;
 
@@ -34,35 +35,44 @@ AppAsset::register($this);
 
     <title>MTender Public Portal</title>
 
-    <link href='<?= File::getNameWithCreatedTime('/css/List.css')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/css/News.css')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/js/About.js')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/js/Accreditation.js')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/js/FAQ.js')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/js/ForCivil.js')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/js/JoinMTender.js')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/js/LegalFramework.js')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/js/List.js')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/js/News.js')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/js/Register.js')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/js/SecurityAndConfidentiality.js')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/js/TenderPage.js')?>' rel=prefetch>
-    <link href='<?= File::getNameWithCreatedTime('/css/app.css')?>' rel=preload as=style>
-    <link href='<?= File::getNameWithCreatedTime('/css/chunk-vendors.css')?>' rel=preload as=style>
-    <link href='<?= File::getNameWithCreatedTime('/js/app.js')?>' rel=preload as=script>
-    <link href='<?= File::getNameWithCreatedTime('/js/chunk-vendors.js')?>' rel=preload as=script>
-    <link href='<?= File::getNameWithCreatedTime('/css/chunk-vendors.css')?>' rel=stylesheet>
-    <link href='<?= File::getNameWithCreatedTime('/css/app.css')?>' rel=stylesheet>
+    <!--<link href='<?/*= File::getNameWithCreatedTime('/css/List.css')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/css/News.css')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/About.js')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/Accreditation.js')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/FAQ.js')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/ForCivil.js')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/JoinMTender.js')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/LegalFramework.js')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/List.js')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/News.js')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/Register.js')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/SecurityAndConfidentiality.js')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/TenderPage.js')*/?>' rel=prefetch>
+    <link href='<?/*= File::getNameWithCreatedTime('/css/app.css')*/?>' rel=preload as=style>
+    <link href='<?/*= File::getNameWithCreatedTime('/css/chunk-vendors.css')*/?>' rel=preload as=style>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/app.js')*/?>' rel=preload as=script>
+    <link href='<?/*= File::getNameWithCreatedTime('/js/chunk-vendors.js')*/?>' rel=preload as=script>
+    <link href='<?/*= File::getNameWithCreatedTime('/css/chunk-vendors.css')*/?>' rel=stylesheet>
+    <link href='<?/*= File::getNameWithCreatedTime('/css/app.css')*/?>' rel=stylesheet>-->
     <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
 
-    <?= $content ?>
+MENU:
+<?php foreach (\frontend\models\Pages::find()->orderBy('id')->all() as $item):?>
+    <?=Html::a($item->title, ['/pages/view', 'slug' => $item->slug])?> |
+<?php endforeach;?>
+
+<?=\common\components\LangWidget::widget()?>
+
+<hr />
+
+<?= $content ?>
 
 <?php $this->endBody() ?>
-<script src='<?= File::getNameWithCreatedTime('/js/chunk-vendors.js')?>'></script>
-<script src='<?= File::getNameWithCreatedTime('/js/app.js')?>'></script>
+<!--<script src='<?/*= File::getNameWithCreatedTime('/js/chunk-vendors.js')*/?>'></script>
+<script src='<?/*= File::getNameWithCreatedTime('/js/app.js')*/?>'></script>-->
 </body>
 </html>
 <?php $this->endPage() ?>
