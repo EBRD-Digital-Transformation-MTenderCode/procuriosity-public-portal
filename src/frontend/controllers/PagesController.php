@@ -10,7 +10,7 @@ Class PagesController extends Controller
 
     public function actionView($slug)
     {
-        $this->layout = 'main_page';
+        $this->layout = 'main';
         if(!$model = Pages::findOne(['slug' => $slug])) {
             throw new NotFoundHttpException('Not found page!');
         }
