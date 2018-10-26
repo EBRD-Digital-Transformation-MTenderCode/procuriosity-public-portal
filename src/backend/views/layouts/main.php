@@ -72,10 +72,10 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                             [
                                 "items" => [
                                     ["label" => "Home", "url" => ["/"], "icon" => "home"],
-                                    ["label" => "User Roles", "url" => ["/roles/index"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
-                                    ["label" => "Users", "url" => ["/users/index"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
-                                    ["label" => "I18n translates", "url" => ["/i18n"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
-                                    ["label" => "Pages", "url" => ["/pages/index"], "icon" => "files-o", 'visible' => Yii::$app->user->can('admin')],
+                                    ["label" => "User Roles", "url" => ["/roles/index"], "icon" => "users", 'visible' => Yii::$app->user->can('admin')],
+                                    ["label" => "Users", "url" => ["/users/index"], "icon" => "user", 'visible' => Yii::$app->user->can('admin')],
+                                    ["label" => "I18n translates", "url" => ["/i18n"], "icon" => "language", 'visible' => Yii::$app->user->can('admin')],
+                                    ["label" => "Pages", "url" => ["/pages/index"], "icon" => "align-justify", 'visible' => Yii::$app->user->can('admin')],
 
                                 ],
                             ]
