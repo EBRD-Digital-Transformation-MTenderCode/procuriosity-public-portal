@@ -13,7 +13,18 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
-        'i18n' => common\modules\i18n\Module::className(),
+        'i18n' => [
+            'class' => common\modules\i18n\Module::className(),
+            'as access' => [
+                'class' => yii\filters\AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['admin']
+                    ]
+                ]
+            ]
+        ]
     ],
     'components' => [
         'request' => [
