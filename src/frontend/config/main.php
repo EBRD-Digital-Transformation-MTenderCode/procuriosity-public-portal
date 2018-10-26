@@ -45,7 +45,7 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'class'=>'common\components\LangUrlManager',
+            'class'=>'common\components\UrlManager',
             'languages' => ['ro', 'en', 'ru'],
             'rules' => [
                 [
@@ -54,7 +54,6 @@ return [
                 'params' => 'params/index',
                 'login' => 'login/index',
                 'search/<action:\w+>' => 'search/<action>',
-                //'page/<slug:[\-\w]+>' => 'pages/view',
 
                 [
                     'class' => 'common\components\UrlRule',
