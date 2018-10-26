@@ -41,6 +41,14 @@ class ComposerStaticInitb449bd39e86818b280f9cf2f00029bc4
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'm' => 
+        array (
+            'mihaildev\\ckeditor\\' => 19,
+        ),
+        'h' => 
+        array (
+            'heggi\\slugwidget\\' => 17,
+        ),
         'c' => 
         array (
             'cebe\\markdown\\' => 14,
@@ -140,6 +148,14 @@ class ComposerStaticInitb449bd39e86818b280f9cf2f00029bc4
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'mihaildev\\ckeditor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mihaildev/yii2-ckeditor',
+        ),
+        'heggi\\slugwidget\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/heggi/yii2-slugwidget',
         ),
         'cebe\\markdown\\' => 
         array (

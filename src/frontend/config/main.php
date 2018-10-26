@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-frontend',
+    'language' => 'ro',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
@@ -44,10 +45,13 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'class'=>'common\components\LangUrlManager',
+            'languages' => ['ro', 'en', 'ru'],
             'rules' => [
                 'params' => 'params/index',
                 'login' => 'login/index',
                 'search/<action:\w+>' => 'search/<action>',
+                'page/<slug:[\-\w]+>' => 'pages/view',
 
                 [
                     'class' => 'common\components\UrlRule',
