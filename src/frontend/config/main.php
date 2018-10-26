@@ -51,6 +51,7 @@ return [
                 [
                     'class' => 'common\components\PageUrlRule',
                 ],
+                '' => 'site/index',
                 'params' => 'params/index',
                 'login' => 'login/index',
                 'search/<action:\w+>' => 'search/<action>',
