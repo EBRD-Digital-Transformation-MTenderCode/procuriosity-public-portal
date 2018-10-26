@@ -33,15 +33,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'title_ro',
             'title_en',
             'title_ru',
-            'body_ro:raw',
-            'body_en:raw',
-            'body_ru:raw',
-            'meta_title_ro',
-            'meta_title_en',
-            'meta_title_ru',
-            'meta_description_ro',
-            'meta_description_en',
-            'meta_description_ru',
         ],
     ]) ?>
 
