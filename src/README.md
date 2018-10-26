@@ -8,4 +8,6 @@ php yii admin/create-role
 
 php yii admin/create-user
 
+php yii migrate
+
 ./yii migrate --migrationPath=@common/modules/i18n/migrations

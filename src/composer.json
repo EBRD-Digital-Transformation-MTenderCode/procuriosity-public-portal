@@ -19,7 +19,9 @@
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "ustudio/service_mandatory": "~4.0",
-        "yiister/yii2-gentelella": "~1.0"
+        "yiister/yii2-gentelella": "~1.0",
+        "mihaildev/yii2-ckeditor": "*",
+        "heggi/yii2-slugwidget": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

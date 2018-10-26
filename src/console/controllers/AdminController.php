@@ -12,8 +12,12 @@ Class AdminController extends Controller
     public function actionCreateRole()
     {
         $auth = Yii::$app->authManager;
-        $admin = $auth->createRole(self::ADMIN_ROLE);
-        $auth->add($admin);
+        if(!$auth->getRole(self::ADMIN_ROLE)) {
+            $admin = $auth->createRole(self::ADMIN_ROLE);
+            $auth->add($admin);
+        } else {
+            echo("Role " . self::ADMIN_ROLE . " already exist\n");
+        }
     }
 
     public function actionCreateUser()
@@ -27,6 +31,10 @@ Class AdminController extends Controller
         $auth = Yii::$app->authManager;
         $role = self::ADMIN_ROLE;
         $getRole = $auth->getRole($role);
-        $auth->assign($getRole, $user->id);
+        try {
+            $auth->assign($getRole, $user->id);
+        }catch (\Exception $e) {
+            echo("User " . $modelSignup->username . " already have role " . $role . "\n");
+        }
     }
 }
