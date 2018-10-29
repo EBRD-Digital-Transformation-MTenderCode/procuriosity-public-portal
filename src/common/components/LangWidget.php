@@ -26,21 +26,15 @@ class LangWidget extends Widget
     public function run()
     {
         return '
-            <ul class="el-dropdown-menu el-popper locale-dropdown-menu el-dropdown-menu--small" id="dropdown-menu-207" style="display: none;">
+            <ul class="el-dropdown-menu el-popper locale-dropdown-menu el-dropdown-menu--small" id="locale-menu">
                 <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
-                    <span class="locale-lang">
-                        <a href="' . $this->translateCurrentRequest('ro') . '" ' . ((Yii::$app->language == 'ro') ? 'class="active"' : '') . '>'.Yii::t('app/language', 'ro').'</a>
-                    </span>
+                    <a class="locale-lang" href="' . $this->translateCurrentRequest('ro') . '" ' . ((Yii::$app->language == 'ro') ? 'class="active"' : '') . '>' . Yii::t('app/language', 'ro') . '</a>
                 </li>
                 <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
-                    <span class="locale-lang">
-                        <a href="' . $this->translateCurrentRequest('en') . '" ' . ((Yii::$app->language == 'en') ? 'class="active"' : '') . '>'.Yii::t('app/language', 'en').'</a>
-                    </span>
+                    <a class="locale-lang" href="' . $this->translateCurrentRequest('en') . '" ' . ((Yii::$app->language == 'en') ? 'class="active"' : '') . '>' . Yii::t('app/language', 'en') . '</a>
                 </li>
                 <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
-                    <span class="locale-lang">
-                        <a href="' . $this->translateCurrentRequest('ru') . '" ' . ((Yii::$app->language == 'ru') ? 'class="active"' : '') . '>'.Yii::t('app/language', 'ru').'</a>
-                    </span>
+                    <a class="locale-lang" href="' . $this->translateCurrentRequest('ru') . '" ' . ((Yii::$app->language == 'ru') ? 'class="active"' : '') . '>' . Yii::t('app/language', 'ru') . '</a>
                 </li>
             </ul>';
     }
