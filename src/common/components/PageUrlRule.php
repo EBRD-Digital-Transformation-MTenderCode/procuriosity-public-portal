@@ -28,10 +28,7 @@ class PageUrlRule extends BaseObject implements UrlRuleInterface
     public function createUrl($manager, $route, $params)
     {
         if ($route === 'pages/view' & isset($params['slug'])) {
-            if (($model = Pages::findOne(['slug' => $params['slug']])) == NULL ) {
-                return false;
-            }
-            $url = $model->slug;
+            $url = $params['slug'];
             if(!empty($params['language'])) {
                 $url .= '?language=' . $params['language'];
             }
