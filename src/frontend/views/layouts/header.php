@@ -25,7 +25,7 @@ use yii\helpers\Html;
                         <span class="el-dropdown-link el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-207" role="button" tabindex="0">
                             <span class="locale-lang">
                                 <? /* @TODO need full name language */ ?>
-                                <?= Yii::$app->language ?>
+                                <?= Yii::t('app/language', Yii::$app->language) ?>
                             </span>
                             <i class="el-icon-caret-bottom el-icon--right"></i>
                         </span>
@@ -47,7 +47,7 @@ use yii\helpers\Html;
                         >
                     </a>
                     <nav class="header-static-nav">
-                        <?php foreach (\frontend\models\Pages::find()->orderBy('id')->all() as $item):?>
+                        <?php foreach (\frontend\models\Pages::getItems() as $item):?>
                             <?=Html::a($item->title, ['/pages/view', 'slug' => $item->slug])?>
                         <?php endforeach;?>
                     </nav>

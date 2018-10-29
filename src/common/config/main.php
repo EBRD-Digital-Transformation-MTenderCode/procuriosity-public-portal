@@ -5,6 +5,7 @@ return [
         '@npm'   => '@vendor/npm-asset',
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+    'bootstrap' => ['\common\modules\i18n\Bootstrap'],
     'components' => [
         'authManager' => [
             'class' => 'yii\rbac\DbManager',

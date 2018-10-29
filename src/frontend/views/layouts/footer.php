@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: volkov
- * Date: 29.10.18
- * Time: 11:34
- */
+use yii\helpers\Html;
 ?>
 
 <footer class="el-footer footer">
@@ -23,44 +18,18 @@
                     </div>
                 </div>
                 <nav class="footer-nav">
-                    <? /* @TODO need foreach */?>
                     <div>
-                        <a href="/about">
-                            Despre SIA RSAP MTender
-                        </a>
-                        <br>
-                        <a href="/register" >
-                            Înregistrare
-                        </a>
-                        <br>
-                    </div>
-                    <div >
-                        <a href="/legal-framework">
-                            Legislația
-                        </a>
-                        <br>
-                        <a href="/security-and-confidentiality">
-                            Securitatea
-                        </a>
-                        <br>
-                        <a href="/join-mtender">
-                            Aderă la MTender
-                        </a>
-                        <br>
-                    </div>
-                    <div >
-                        <a href="/accreditation">
-                            Comisia de acreditare
-                        </a>
-                        <br>
-                        <a href="/for-civil" >
-                            Pentru Societatea Civilă
-                        </a>
-                        <br >
-                        <a href="/faq">
-                            Întrebări frecvente
-                        </a>
-                        <br>
+                    <?php
+                    $i = 0;
+                    foreach (\frontend\models\Pages::getItems() as $key => $item):
+                        if($key == 0){ continue; }
+                        $i++;
+                    if(($i%3)==0){echo"</div><div>";}
+                        ?>
+                        <?=Html::a($item->title, ['/pages/view', 'slug' => $item->slug])."<br>";?>
+                    <?php
+                    endforeach;
+                    ?>
                     </div>
                 </nav>
                 <div class="footer-info">

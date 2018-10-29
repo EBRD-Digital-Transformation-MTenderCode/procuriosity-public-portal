@@ -6,6 +6,8 @@ use yii\db\ActiveRecord;
 
 Class Pages extends ActiveRecord
 {
+    public static $items;
+
     public static function tableName()
     {
         return "pages";
@@ -33,5 +35,13 @@ Class Pages extends ActiveRecord
     {
         $var = "meta_description_" . Yii::$app->language;
         return $this->{$var};
+    }
+
+    public static function getItems()
+    {
+        if(!self::$items) {
+            self::$items = self::find()->orderBy('id')->all();
+        }
+        return self::$items;
     }
 }

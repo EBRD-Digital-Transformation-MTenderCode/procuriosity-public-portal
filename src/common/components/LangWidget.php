@@ -29,17 +29,17 @@ class LangWidget extends Widget
             <ul class="el-dropdown-menu el-popper locale-dropdown-menu el-dropdown-menu--small" id="dropdown-menu-207" style="display: none;">
                 <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
                     <span class="locale-lang">
-                        <a href="' . $this->translateCurrentRequest('ro') . '" ' . ((Yii::$app->language == 'ro') ? 'class="active"' : '') . '>RO</a>
+                        <a href="' . $this->translateCurrentRequest('ro') . '" ' . ((Yii::$app->language == 'ro') ? 'class="active"' : '') . '>'.Yii::t('app/language', 'ro').'</a>
                     </span>
                 </li>
                 <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
                     <span class="locale-lang">
-                        <a href="' . $this->translateCurrentRequest('en') . '" ' . ((Yii::$app->language == 'en') ? 'class="active"' : '') . '>EN</a>
+                        <a href="' . $this->translateCurrentRequest('en') . '" ' . ((Yii::$app->language == 'en') ? 'class="active"' : '') . '>'.Yii::t('app/language', 'en').'</a>
                     </span>
                 </li>
                 <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
                     <span class="locale-lang">
-                        <a href="' . $this->translateCurrentRequest('ru') . '" ' . ((Yii::$app->language == 'ru') ? 'class="active"' : '') . '>RU</a>
+                        <a href="' . $this->translateCurrentRequest('ru') . '" ' . ((Yii::$app->language == 'ru') ? 'class="active"' : '') . '>'.Yii::t('app/language', 'ru').'</a>
                     </span>
                 </li>
             </ul>';
