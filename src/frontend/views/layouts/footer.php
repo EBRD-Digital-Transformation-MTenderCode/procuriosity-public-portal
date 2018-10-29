@@ -4,8 +4,8 @@ use yii\helpers\Html;
 
 <footer class="el-footer footer">
     <section class="el-container">
-        <div class="el-row" style="margin-left: -15px; margin-right: -15px;">
-            <div class="el-col el-col-24" style="padding-left: 15px; padding-right: 15px;">
+        <div class="el-row">
+            <div class="el-col el-col-24">
                 <div class="footer-logo">
                     <a href="/" class="router-link-exact-active router-link-active">
                         <img

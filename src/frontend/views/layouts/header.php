@@ -5,8 +5,8 @@ use yii\helpers\Html;
 <header class="el-header header">
     <div class="header-first">
         <section class="el-container">
-            <div class="el-row" style="margin-left: -15px; margin-right: -15px;">
-                <div class="el-col el-col-24" style="padding-left: 15px; padding-right: 15px;">
+            <div class="el-row">
+                <div class="el-col el-col-24">
                     <div class="header-logo-ebrd">
                         <a href="/" class="header-logo-ebrd__link router-link-active">
                             <img
@@ -22,12 +22,12 @@ use yii\helpers\Html;
                         </div>
                     </div>
                     <div class="locale-toggle el-dropdown">
-                        <span class="el-dropdown-link el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-207" role="button" tabindex="0">
+                        <span class="el-dropdown-link el-dropdown-selfdefine" id="locale-toggle" aria-haspopup="list" role="button" tabindex="0">
                             <span class="locale-lang">
                                 <? /* @TODO need full name language */ ?>
                                 <?= Yii::t('app/language', Yii::$app->language) ?>
                             </span>
-                            <i class="el-icon-caret-bottom el-icon--right"></i>
+                            <span class="caret">&#8227;</span>
                         </span>
                         <?=\common\components\LangWidget::widget()?>
                     </div>
@@ -37,8 +37,8 @@ use yii\helpers\Html;
     </div>
     <div class="header-second">
         <section class="el-container is-vertical">
-            <div class="el-row" style="margin-left: -15px; margin-right: -15px;">
-                <div class="el-col el-col-24" style="padding-left: 15px; padding-right: 15px;">
+            <div class="el-row">
+                <div class="el-col el-col-24">
                     <a href="/" class="header-logo-mtender__link router-link-active">
                         <img
                             src="data:image/png;base64,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"
@@ -47,6 +47,7 @@ use yii\helpers\Html;
                         >
                     </a>
                     <nav class="header-static-nav">
+                        <? /* @TODO need add to active link class "header-static-nav_active" */ ?>
                         <?php foreach (\frontend\models\Pages::getItems() as $item):?>
                             <?=Html::a($item->title, ['/pages/view', 'slug' => $item->slug])?>
                         <?php endforeach;?>
@@ -54,9 +55,9 @@ use yii\helpers\Html;
                 </div>
             </div>
             <nav class="header-entity-nav">
-                <a href="#/plans" class="">Планирование закупок</a>
-                <a href="#/tenders" class="">Бюллетень государственных закупок</a>
-                <a href="#/contracts" class="router-link-exact-active is-active">Реестр договоров</a>
+                <a href="/plans" class="">Планирование закупок</a>
+                <a href="/tenders" class="">Бюллетень государственных закупок</a>
+                <a href="/contracts" class="router-link-exact-active is-active">Реестр договоров</a>
             </nav>
         </section>
     </div>

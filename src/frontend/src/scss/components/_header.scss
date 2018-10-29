@@ -1,0 +1,142 @@
+@import "./../variables";
+
+.header {
+  &-first {
+    padding: 5px 0 5px;
+    background-color: $mainC;
+    color: #fff;
+  }
+  &-second {
+    padding-top: 25px;
+    background-color: #fff;
+  }
+  &-logo {
+    &-ebrd {
+      display: flex;
+      align-items: center;
+      &__link {
+        flex-shrink: 0;
+      }
+      &__img {
+        height: 30px;
+        margin-right: 20px;
+      }
+      &__text {
+        line-height: 1.1;
+        font-size: 11px;
+      }
+    }
+    &-mtender {
+      &__link {
+        flex-shrink: 0;
+      }
+      &__img {
+        align-self: flex-start;
+        margin-right: 20px;
+      }
+    }
+  }
+  &-static-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-start;
+    flex-wrap: wrap;
+    max-width: 70%;
+    text-align: right;
+    &_active {
+      color: #000;
+    }
+    a {
+      display: inline-block;
+      height: 12px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      color: #838383;
+      &:hover {
+        color: #323232;
+      }
+      &:not(:last-child) {
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid #838383;
+      }
+    }
+  }
+  &-entity-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+    a {
+      flex-grow: 1;
+      margin: 0 10px;
+      padding: 14px;
+      border: none;
+      border-radius: 3px 3px 0 0;
+      background-color: #efefef;
+      white-space: nowrap;
+      text-align: center;
+      line-height: 1;
+      font-size: 20px;
+      color: #323232;
+      transition: 0.4s;
+      &:hover {
+        box-shadow: 0 -2px 4px #e2e2e2;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.is-active {
+        background-color: $mainC;
+        color: #fff;
+      }
+    }
+  }
+  .el-col {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.locale {
+  &-toggle {
+    line-height: 1;
+    color: #ffff;
+    .caret {
+      margin-left: 5px;
+      transform: rotate(90deg);
+      font-size: 30px;
+      user-select: none;
+    }
+    .el-dropdown-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+  &-dropdown-menu {
+    display: none;
+    top: 100%;
+    padding: 0;
+    &.visible {
+      display: block;
+    }
+    .el-dropdown-menu__item {
+      margin-top: 0 !important;
+      padding: 0;
+      line-height: 2;
+      &:before {
+        height: 0 !important;
+      }
+      .locale-lang {
+        display: block;
+        padding: 5px 15px;
+        color: #000;
+      }
+    }
+  }
+}
