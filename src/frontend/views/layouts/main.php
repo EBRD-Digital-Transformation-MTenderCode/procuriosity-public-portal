@@ -37,11 +37,11 @@ AppAsset::register($this);
     </head>
     <body>
         <?php $this->beginBody() ?>
-
-        <?php $this->beginContent('@app/views/layouts/header.php'); ?>
-        <?php $this->endContent(); ?>
-
-
+        <?= $this->render("/layouts/header") ?>
+        <main class="el-main">
+            <?/*= $content */?>
+        </main>
+        <?= $this->render("/layouts/footer") ?>
         <?php $this->endBody() ?>
     </body>
     </html>

@@ -23,7 +23,10 @@ use yii\helpers\Html;
                     </div>
                     <div class="locale-toggle el-dropdown">
                         <span class="el-dropdown-link el-dropdown-selfdefine" aria-haspopup="list" aria-controls="dropdown-menu-207" role="button" tabindex="0">
-                            <span class="locale-lang"><?= Yii::$app->language ?></span>
+                            <span class="locale-lang">
+                                <? /* @TODO need full name language */ ?>
+                                <?= Yii::$app->language ?>
+                            </span>
                             <i class="el-icon-caret-bottom el-icon--right"></i>
                         </span>
                         <?=\common\components\LangWidget::widget()?>
