@@ -15,7 +15,7 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/static.js'));
                 <?= $model->title ?>
             </div>
         </aside>
-        <section class="static-content"><h1><?= $model->title ?></h1>
+        <section class="static-content">
             <?= $model->body ?>
         </section>
     </div>

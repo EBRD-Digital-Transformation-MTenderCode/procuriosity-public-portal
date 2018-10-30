@@ -44,7 +44,7 @@ use yii\helpers\Url;
                         Linia info:
                     </div>
                     <div class="footer-info__tel">
-                        <a href="tel:+373022789789">022 789 789</a>
+                        <a href="tel:+373022822038">022 822 038</a>
                     </div>
                 </div>
             </div>
