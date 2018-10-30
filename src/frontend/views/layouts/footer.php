@@ -26,7 +26,13 @@ use yii\helpers\Html;
                         $i++;
                     if(($i%3)==0){echo"</div><div>";}
                         ?>
-                        <?=Html::a($item->title, ['/pages/view', 'slug' => $item->slug])."<br>";?>
+                        <?php
+                        $options = [];
+                        if(Yii::$app->request->get('slug') == $item->slug) {
+                            $options = ['class' => 'footer-static-nav_active'];
+                        }
+                        echo Html::a($item->title, ['/pages/view', 'slug' => $item->slug], $options)."<br>";
+                        ?>
                     <?php
                     endforeach;
                     ?>

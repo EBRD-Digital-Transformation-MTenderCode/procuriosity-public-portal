@@ -24,7 +24,6 @@ use yii\helpers\Html;
                     <div class="locale-toggle el-dropdown">
                         <span class="el-dropdown-link el-dropdown-selfdefine" id="locale-toggle" role="button" tabindex="0">
                             <span class="locale-lang">
-                                <? /* @TODO need full name language */ ?>
                                 <?= Yii::t('app/language', Yii::$app->language) ?>
                             </span>
                             <span class="caret">&#8227;</span>
@@ -47,9 +46,14 @@ use yii\helpers\Html;
                         >
                     </a>
                     <nav class="header-static-nav">
-                        <? /* @TODO need add to active link class "header-static-nav_active" */ ?>
                         <?php foreach (\frontend\models\Pages::getItems() as $item):?>
-                            <?=Html::a($item->title, ['/pages/view', 'slug' => $item->slug])?>
+                            <?php
+                            $options = [];
+                            if(Yii::$app->request->get('slug') == $item->slug) {
+                                $options = ['class' => 'header-static-nav_active'];
+                            }
+                            echo Html::a($item->title, ['/pages/view', 'slug' => $item->slug], $options);
+                            ?>
                         <?php endforeach;?>
                     </nav>
                 </div>
