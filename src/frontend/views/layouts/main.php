@@ -38,7 +38,9 @@ AppAsset::register($this);
     <body>
         <?php $this->beginBody() ?>
         <?= $this->render("/layouts/header") ?>
-        <?= $content ?>
+        <main class="el-main">
+            <?= $content ?>
+        </main>
         <?= $this->render("/layouts/footer") ?>
         <?php $this->endBody() ?>
     </body>
