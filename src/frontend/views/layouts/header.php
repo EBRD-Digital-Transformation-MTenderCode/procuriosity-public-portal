@@ -22,7 +22,7 @@ use yii\helpers\Html;
                         </div>
                     </div>
                     <div class="locale-toggle el-dropdown">
-                        <span class="el-dropdown-link el-dropdown-selfdefine" id="locale-toggle" aria-haspopup="list" role="button" tabindex="0">
+                        <span class="el-dropdown-link el-dropdown-selfdefine" id="locale-toggle" role="button" tabindex="0">
                             <span class="locale-lang">
                                 <? /* @TODO need full name language */ ?>
                                 <?= Yii::t('app/language', Yii::$app->language) ?>
@@ -55,9 +55,9 @@ use yii\helpers\Html;
                 </div>
             </div>
             <nav class="header-entity-nav">
-                <a href="/plans" class="">Планирование закупок</a>
-                <a href="/tenders" class="">Бюллетень государственных закупок</a>
-                <a href="/contracts" class="router-link-exact-active is-active">Реестр договоров</a>
+                <a href="/plans">Планирование закупок</a>
+                <a href="/tenders">Бюллетень государственных закупок</a>
+                <a href="/contracts">Реестр договоров</a>
             </nav>
         </section>
     </div>

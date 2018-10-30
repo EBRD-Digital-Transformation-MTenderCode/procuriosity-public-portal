@@ -23,6 +23,8 @@ class LangWidget extends Widget
         return Url::to($params);
     }
 
+    // @TODO need delete add class active
+
     public function run()
     {
         return '
