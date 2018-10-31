@@ -13,6 +13,8 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/main.js'));
 
 ?>
 
+<?=$modelPage->body?>
+
 <div class="main">
     <div class="main-banner">
         <section class="el-container is-vertical">
