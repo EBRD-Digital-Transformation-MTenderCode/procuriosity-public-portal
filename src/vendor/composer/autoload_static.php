@@ -21,6 +21,7 @@ class ComposerStaticInitb449bd39e86818b280f9cf2f00029bc4
         array (
             'yiister\\gentelella\\' => 19,
             'yii\\swiftmailer\\' => 16,
+            'yii\\jui\\' => 8,
             'yii\\httpclient\\' => 15,
             'yii\\gii\\' => 8,
             'yii\\faker\\' => 10,
@@ -106,6 +107,10 @@ class ComposerStaticInitb449bd39e86818b280f9cf2f00029bc4
         'yii\\swiftmailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer/src',
+        ),
+        'yii\\jui\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-jui',
         ),
         'yii\\httpclient\\' => 
         array (
