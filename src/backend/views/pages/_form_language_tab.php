@@ -1,5 +1,4 @@
 <?php
-
 use yii\helpers\Html;
 use mihaildev\ckeditor\CKEditor;
 
@@ -11,6 +10,7 @@ use mihaildev\ckeditor\CKEditor;
         'editorOptions' => [
             'preset' => 'full',
             'inline' => false,
+            'contentsCss' => ['/css/main.css', '/css/index.css']
         ],
     ]) ?>
 
