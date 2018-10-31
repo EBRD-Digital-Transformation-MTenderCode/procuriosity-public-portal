@@ -38,7 +38,8 @@ class Pages extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['slug', 'title_en'], 'required'],
+            [['slug', 'title_en', 'menu'], 'required'],
+            [['menu'], 'integer'],
             [['body_ro', 'body_en', 'body_ru'], 'string'],
             [['slug', 'title_ro', 'title_en', 'title_ru', 'meta_title_ro', 'meta_title_en', 'meta_title_ru', 'meta_description_ro', 'meta_description_en', 'meta_description_ru'], 'string', 'max' => 255],
             [['slug'], 'unique'],

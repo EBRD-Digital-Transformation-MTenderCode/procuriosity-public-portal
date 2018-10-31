@@ -7,12 +7,14 @@ use mihaildev\ckeditor\CKEditor;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Pages */
 /* @var $form yii\widgets\ActiveForm */
-$this->registerJs("$('.unlockslug').text('change');", yii\web\View::POS_READY);
+$this->registerJs("$('.unlockslug').remove();", yii\web\View::POS_READY);
 ?>
 
 <div class="pages-form">
 
     <?php $form = ActiveForm::begin(); ?>
+
+    <?= $form->field($model, 'menu')->checkbox() ?>
 
     <?= $form->field($model, 'slug')->widget(\heggi\slugwidget\SlugWidget::className(), ['title' => 'title_en']) ?>
 

@@ -40,7 +40,7 @@ Class Pages extends ActiveRecord
     public static function getItems()
     {
         if(!self::$items) {
-            self::$items = self::find()->orderBy('id')->all();
+            self::$items = self::find()->where(['menu' => 1])->orderBy('id')->all();
         }
         return self::$items;
     }
