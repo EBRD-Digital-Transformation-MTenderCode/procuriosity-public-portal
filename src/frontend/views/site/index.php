@@ -1,7 +1,9 @@
 <?php
-
+use yii\helpers\Html;
 use frontend\models\File;
 use yii\helpers\Url;
+use frontend\models\News;
+use yii\helpers\StringHelper;
 
 $this->registerCssFile('https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css');
 $this->registerCssFile(File::getNameWithCreatedTime('/css/main.css'));
@@ -89,34 +91,13 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/main.js'));
                 News
             </div>
             <div class="main-news__cards-wp">
-                <div class="main-news__card"><img src="/img/news_1.jpg" alt="news1" class="main-news__img">
+                <?php foreach (News::getLastItems() as $item):?>
+                <div class="main-news__card"><img src="/uploads/news/ico/<?=$item->image?>" alt="<?=Html::encode($item->title)?>" class="main-news__img">
                     <div class="main-news__text">
-                        <?=Yii::t("app/site", "test") ?>
-                        New types of electronic tendering procedures are becoming available on the MTender, to suit
-                        different types of contracts and serve different public and commercial buyers, including
-                        state-owned enterprises. The Ministry of Finance of Moldova is first introducing electronic
-                        public procurement procedures of open tender, request for quotation, and negotiated
-                        procedure without publication of contract notice.
+                        <?=StringHelper::truncate(strip_tags($item->body), 360)?>
                     </div>
                 </div>
-                <div class="main-news__card"><img src="/img/news2.jpg" alt="news2" class="main-news__img">
-                    <div class="main-news__text">
-                        On 22-26 October 2018, the Ministry of Finance of Moldova and the Speaker of the Parliament
-                        of Moldova are hosting the WTO Regional Seminar for GPA Parties and Observer Governments
-                        from Central Europe, Western Balkans, Caucasus and Central Asia, including a session on
-                        digital public procurement in Moldova. Register to attend the UNDP Open Government and
-                        Public Spending session on 22 October.
-                    </div>
-                </div>
-                <div class="main-news__card"><img src="/img/news3.jpg" alt="news3" class="main-news__img">
-                    <div class="main-news__text">
-                        On 22-26 October 2018, the Ministry of Finance of Moldova and the Speaker of the Parliament
-                        of Moldova are hosting the WTO Regional Seminar for GPA Parties and Observer Governments
-                        from Central Europe, Western Balkans, Caucasus and Central Asia, including a session on
-                        digital public procurement in Moldova. Register to attend the UNDP Open Government and
-                        Public Spending session on 22 October.
-                    </div>
-                </div>
+                <?php endforeach;?>
             </div>
         </div>
     </section>

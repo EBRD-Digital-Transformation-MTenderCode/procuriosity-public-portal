@@ -21,7 +21,8 @@
         "ustudio/service_mandatory": "~4.0",
         "yiister/yii2-gentelella": "~1.0",
         "mihaildev/yii2-ckeditor": "*",
-        "heggi/yii2-slugwidget": "*"
+        "heggi/yii2-slugwidget": "*",
+        "yiisoft/yii2-jui": "^2.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

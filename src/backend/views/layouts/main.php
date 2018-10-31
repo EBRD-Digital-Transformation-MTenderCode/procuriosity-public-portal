@@ -76,6 +76,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     ["label" => "Users", "url" => ["/users/index"], "icon" => "user", 'visible' => Yii::$app->user->can('admin')],
                                     ["label" => "I18n translates", "url" => ["/i18n"], "icon" => "language", 'visible' => Yii::$app->user->can('admin')],
                                     ["label" => "Pages", "url" => ["/pages/index"], "icon" => "align-justify", 'visible' => Yii::$app->user->can('admin')],
+                                    ["label" => "News", "url" => ["/news/index"], "icon" => "align-justify", 'visible' => Yii::$app->user->can('admin')],
 
                                 ],
                             ]

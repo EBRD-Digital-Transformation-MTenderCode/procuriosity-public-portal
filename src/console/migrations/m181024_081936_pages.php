@@ -97,6 +97,6 @@ class m181024_081936_pages extends Migration
      */
     public function safeDown()
     {
-
+        $this->dropTable('{{%pages}}');
     }
 }
