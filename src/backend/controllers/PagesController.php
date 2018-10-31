@@ -113,7 +113,7 @@ class PagesController extends Controller
      * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionDelete($id)
-    {die;
+    {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
