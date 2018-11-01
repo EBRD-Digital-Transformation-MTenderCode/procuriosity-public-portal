@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html;
-use frontend\models\File;
+use frontend\helpers\File;
 use yii\helpers\Url;
 use frontend\models\News;
 use yii\helpers\StringHelper;
