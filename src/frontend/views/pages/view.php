@@ -1,5 +1,5 @@
 <?php
-use frontend\models\File;
+use frontend\helpers\File;
 
 $this->title = $model->metaTitle;
 $this->registerMetaTag(['name' => 'description', 'content' => $model->metaDescription]);

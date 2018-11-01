@@ -37,7 +37,10 @@ $this->params['breadcrumbs'][] = $this->title;
             //'meta_description_en',
             //'meta_description_ru',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                    'class' => 'yii\grid\ActionColumn',
+                    'template' => '{update} {view} ' . (Yii::$app->user->can('admin') ? '{delete}' : '')
+            ],
         ],
     ]); ?>
 </div>

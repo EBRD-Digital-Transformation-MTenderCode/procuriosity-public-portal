@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html;
-use frontend\models\File;
+use frontend\helpers\File;
 use yii\helpers\Url;
 use frontend\models\News;
 use yii\helpers\StringHelper;
@@ -12,6 +12,8 @@ $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/
 $this->registerJsFile(File::getNameWithCreatedTime('/js/main.js'));
 
 ?>
+
+<?=$modelPage->body?>
 
 <div class="main">
     <div class="main-banner">

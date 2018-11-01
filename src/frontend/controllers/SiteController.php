@@ -2,7 +2,9 @@
 
 namespace frontend\controllers;
 
+use frontend\models\Pages;
 use yii\web\Controller;
+use yii\web\NotFoundHttpException;
 
 class SiteController extends Controller
 {
@@ -24,13 +26,18 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
-     *
      * @return string
+     * @throws NotFoundHttpException
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        if(!$modelPage = Pages::findOne(['slug'=>'main-page'])) {
+            throw new NotFoundHttpException('Not main page');
+        }
+
+        return $this->render('index', [
+            'modelPage' => $modelPage
+        ]);
     }
 
 }
