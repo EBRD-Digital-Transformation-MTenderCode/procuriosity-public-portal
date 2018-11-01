@@ -46,7 +46,8 @@ use yii\helpers\Url;
                             class="header-logo-mtender__img"
                         >
                     </a>
-                    <nav class="header-static-nav">
+                    <button class="header-dropdown header-dropdown-hamb" id="header-dropdown">menu</button>
+                    <nav class="header-static-nav" id="header-static-nav">
                         <?php foreach (\frontend\models\Pages::getItems() as $item):?>
                             <?php
                             $options = [];
@@ -60,9 +61,9 @@ use yii\helpers\Url;
                 </div>
             </div>
             <nav class="header-entity-nav">
-                <a href="/plans">Планирование закупок</a>
-                <a href="/tenders">Бюллетень государственных закупок</a>
-                <a href="/contracts">Реестр договоров</a>
+                <a href="/plans"><?=Yii::t("app/header", "nav-plans") ?></a>
+                <a href="/tenders"> <?=Yii::t("app/header", "nav-tenders") ?></a>
+                <a href="/contracts"><?=Yii::t("app/header", "nav-contracts") ?></a>
             </nav>
         </section>
     </div>

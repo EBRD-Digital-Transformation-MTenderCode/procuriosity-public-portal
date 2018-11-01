@@ -5,35 +5,69 @@
     padding: 5px 0 5px;
     background-color: $mainC;
     color: #fff;
+    & .el-col {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   &-second {
     padding-top: 25px;
     background-color: #fff;
+    & .el-col {
+      @media (max-width: 990px) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
   }
   &-logo {
     &-ebrd {
       display: flex;
       align-items: center;
       flex-grow: 1;
+      @media (max-width: 990px) {
+        margin: 0 10px;
+      }
+      @media (max-width: 540px) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
       &__link {
         flex-shrink: 0;
       }
       &__img {
         height: 30px;
         margin-right: 20px;
+        @media (max-width: 410px) {
+          margin-right: 0;
+        }
       }
       &__text {
         line-height: 1.1;
         font-size: 11px;
+        @media (max-width: 430px) {
+          text-align: center;
+        }
       }
     }
     &-mtender {
       &__link {
         flex-shrink: 0;
+        @media (max-width: 990px) {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 25px;
+        }
+        @media (max-width: 550px) {
+          margin-bottom: 30px;
+        }
       }
       &__img {
         align-self: flex-start;
         margin-right: 20px;
+        @media (max-width: 530px) {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -44,6 +78,20 @@
     flex-wrap: wrap;
     max-width: 70%;
     text-align: right;
+    @media (max-width: 990px) {
+      max-width: 90%;
+      justify-content: center;
+    }
+    @media (max-width: 550px) {
+      display: block;
+      top: 100%;
+      width: 100%;
+      background-color: #efefef;
+      z-index: 2;
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
     &_active {
       color: #000 !important;
     }
@@ -60,11 +108,27 @@
         margin-right: 10px;
         padding-right: 10px;
         border-right: 1px solid #838383;
+        @media(max-width: 550px) {
+          border-right: 0;
+          margin-right: 0;
+          padding-right: 0;
+        }
+      }
+      @media (max-width: 550px) {
+        width: 100%;
+        display: block;
+        height: auto;
+        margin-bottom: 0;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid #838383;
+        font-size: 20px;
       }
     }
   }
   &-entity-nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 22px;
     a {
@@ -80,6 +144,20 @@
       font-size: 20px;
       color: #323232;
       transition: 0.4s;
+      @media (max-width: 930px) {
+        margin: 0 5px;
+        padding: 10px 15px;
+        font-size: 15px;
+      }
+      @media (max-width: 730px) {
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px;
+      }
+      @media (max-width: 350px) {
+        font-size: 13px;
+      }
+
       &:hover {
         box-shadow: 0 -2px 4px #e2e2e2;
       }
@@ -93,12 +171,58 @@
         background-color: $mainC;
         color: #fff;
       }
+
     }
   }
   .el-col {
-    justify-content: space-between;
     align-items: center;
   }
+  &-dropdown {
+    display: none;
+    @media (max-width: 550px) {
+      display: block;
+      width: 35px;
+      height: 35px;
+      padding-left: 40px;
+      &-hamb{
+        background: repeating-linear-gradient(
+        #fff,
+        #fff 5px,
+        #999 5px,
+        #999 10px);
+        background-size: 30px;
+        background-repeat-x: no-repeat;
+        transition: 0.8s;
+      }
+      &-close{
+        background:
+                linear-gradient(45deg, transparent, transparent 21px,
+                        #999 21px,
+                        #999 26px,
+                        transparent 26px),
+
+                linear-gradient(-45deg, transparent, transparent 21px,
+                        #999 21px,
+                        #999 26px,
+                        transparent 26px);
+
+        background-size: 26px;
+        background-repeat-x: no-repeat;
+        transition: 0.8s;
+      }
+      cursor: pointer;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #999;
+    }
+  }
+}
+
+.dropdown-show {
+  transition: 0.4s;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .locale {
@@ -106,6 +230,9 @@
     margin-right: 20px;
     line-height: 1;
     color: #ffff;
+    @media (max-width: 550px) {
+      margin-right: 0;
+    }
     .caret {
       margin-left: 5px;
       transform: rotate(90deg);

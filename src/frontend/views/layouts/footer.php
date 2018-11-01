@@ -15,7 +15,8 @@ use yii\helpers\Url;
                             alt="Footer logo">
                     </a>
                     <div class="footer-logo__cr">
-                        2018 ©, Toate drepturile rezervate
+
+                        2018 ©, <?=Yii::t("app/footer", "copyright") ?>
                     </div>
                 </div>
                 <nav class="footer-nav">
@@ -41,7 +42,7 @@ use yii\helpers\Url;
                 </nav>
                 <div class="footer-info">
                     <div class="footer-info__text">
-                        Linia info:
+                        <?=Yii::t("app/footer", "info") ?>:
                     </div>
                     <div class="footer-info__tel">
                         <a href="tel:+373022822038">022 822 038</a>

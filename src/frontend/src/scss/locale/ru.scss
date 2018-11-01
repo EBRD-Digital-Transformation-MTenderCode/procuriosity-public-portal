@@ -1,0 +1,12 @@
+html[lang="ru"]{
+  .footer{
+    nav div{
+      @media (max-width: 650px) {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+}

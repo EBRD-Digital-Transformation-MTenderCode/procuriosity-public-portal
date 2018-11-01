@@ -17,7 +17,7 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/main.js'));
     <div class="main-banner">
         <section class="el-container is-vertical">
             <div class="main-title">
-                Leading by example
+                <?=Yii::t("app/main", "title") ?>
                 <span class="carousel-indicators" id="carousel-indicators">
                     <span class="carousel-indicator is-active"></span>
                     <span class="carousel-indicator"></span>
@@ -32,8 +32,8 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/main.js'));
                             <div class="slide-item__number">933</div>
                         </div>
                         <div class="slide-item__text">
-                            <div>Active</div>
-                            Procedures
+                            <div><?=Yii::t("app/main", "slide-item1-text1") ?></div>
+                            <?=Yii::t("app/main", "slide-item1-text2") ?>
                         </div>
                     </div>
                     <div class="slide-item">
@@ -42,8 +42,8 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/main.js'));
                             <div class="slide-item__number">2’470</div>
                         </div>
                         <div class="slide-item__text">
-                            <div>Concluded</div>
-                            Contracts
+                            <div><?=Yii::t("app/main", "slide-item2-text1") ?></div>
+                            <?=Yii::t("app/main", "slide-item2-text2") ?>
                         </div>
                     </div>
                 </div>
@@ -54,8 +54,8 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/main.js'));
                             <div class="slide-item__number">817</div>
                         </div>
                         <div class="slide-item__text">
-                            <div>Contracting</div>
-                            Entities
+                            <div><?=Yii::t("app/main", "slide-item3-text1") ?></div>
+                            <?=Yii::t("app/main", "slide-item3-text2") ?>
                         </div>
                     </div>
                     <div class="slide-item">
@@ -64,8 +64,8 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/main.js'));
                             <div class="slide-item__number">1’860</div>
                         </div>
                         <div class="slide-item__text">
-                            <div>Economic</div>
-                            Operators
+                            <div><?=Yii::t("app/main", "slide-item4-text1") ?></div>
+                            <?=Yii::t("app/main", "slide-item4-text2") ?>
                         </div>
                     </div>
                 </div>
@@ -76,19 +76,19 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/main.js'));
                             <div class="slide-item__number">12’150’000</div>
                         </div>
                         <div class="slide-item__text">
-                            <div>Total</div>
-                            savings
+                            <div><?=Yii::t("app/main", "slide-item5-text1") ?></div>
+                            <?=Yii::t("app/main", "slide-item5-text2") ?>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="<?=Url::to(['/pages/view', 'slug'=>'join-view'])?>" class="main__join-button">Join</a>
+            <a href="<?=Url::to(['/pages/view', 'slug'=>'join-view'])?>" class="main__join-button"><?=Yii::t("app/main", "join") ?></a>
         </section>
     </div>
     <section class="el-container is-vertical">
         <div class="main-news">
             <div class="main-news__title">
-                News
+                <?=Yii::t("app/main", "news-title") ?>
             </div>
             <div class="main-news__cards-wp">
                 <?php foreach (News::getLastItems() as $item):?>
@@ -104,58 +104,41 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/main.js'));
     <div class="main-about">
         <section class="el-container is-vertical">
             <div class="main-about__title">
-                What is MTender
+                <?=Yii::t("app/main", "about-title") ?>
             </div>
             <div class="main-about__text">
-                The Ministry of Finance of the Republic of Moldova is leading a transition to digital public
-                procurement to ensure more transparent and efficient spending of the state budget of the Republic of
-                Moldova. New digital government service – MTender - will support public procurement from planning
-                the purchase to payment for public contracts. It will shorten time for tendering for public bodies
-                and waiting time for payment for suppliers and contractors.
+                <?=Yii::t("app/main", "about-text") ?>
             </div>
             <div class="main-about__cards-wp">
                 <div class="main-about__card">
                     <img src="/img/main-ico1.png" alt="main ico 1" class="main-about__img">
                     <div class="main-about__card-text">
-                        With MTender digital service, all public tenders are accessible online and every procurement
-                        decision transparently published online in real time. Citizens can watch government
-                        procurement decisions and how taxpayers money are spent on public services.
+                        <?=Yii::t("app/main", "about-card-1") ?>
                     </div>
                 </div>
                 <div class="main-about__card">
                     <img src="/img/main-ico2.png" alt="main ico 2" class="main-about__img">
                     <div class="main-about__card-text">
-                        On account of online and easy to participate tenders, the new fully digital procurement
-                        service will offer better access to opportunities in public procurement for business
-                        community, in particular local small and medium-sized enterprises.
+                        <?=Yii::t("app/main", "about-card-2") ?>
                     </div>
                 </div>
                 <div class="main-about__card">
                     <img src="/img/main-ico3.png" alt="main ico 3" class="main-about__img">
                     <div class="main-about__card-text">
-                        For public bodies, new digital service will also bring improved planning of spending,
-                        quicker purchases and better-quality as a result of ‘zero paper’ electronic bidding
-                        procedures.
+                        <?=Yii::t("app/main", "about-card-3") ?>
                     </div>
                 </div>
             </div>
             <hr class="main-about__line">
             <div class="main-about__sub-title">
-                The MTender is a multi-platform networking digital procurement service it, comprise a
-                government-operated web portal and the Open Data central database unit and is networking with
-                several commercial electronic platforms certified to support electronic tendering procedures for
-                public sector and commercial clients.
+                <?=Yii::t("app/main", "about-sub-title") ?>
             </div>
             <div class="main-about__sub-text">
-                The MTender networking electronic procurement platform is a commercial electronic platform,
-                authorised and certified for networking with the MTender and providing digital electronic tendering
-                services to public sector clients as well as commercial buyers. Each MTender networking platform is
-                providing a help desk service to buyers and economic operators registered on this platform to access
-                digital services of the MTender.
+                <?=Yii::t("app/main", "about-sub-text") ?>
             </div>
             <div class="main-about__partners">
                 <div class="main-about__partners_title">
-                    Presently the MTender is networking with the following platforms:
+                    <?=Yii::t("app/main", "about-partners-title") ?>
                 </div>
                 <div class="main-about__partners_links">
                     <a href="https://yptender.md/" target="_blank">
