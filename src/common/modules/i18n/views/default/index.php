@@ -10,6 +10,7 @@ use yii\widgets\Pjax;
 use yii\grid\GridView;
 use yii\widgets\Breadcrumbs;
 use yii\helpers\ArrayHelper;
+use yii\helpers\StringHelper;
 use common\modules\i18n\Module;
 use common\modules\i18n\models\Message;
 
@@ -52,7 +53,7 @@ echo Breadcrumbs::widget(['links' => [$this->title]]);
                     'attribute' => 'translation',
                     'format' => 'raw',
                     'value' => function ($model, $index, $widget) {
-                        return $model->getDefaultLangTranslation();
+                        return StringHelper::truncate($model->getDefaultLangTranslation(),120);
                     }
                 ],
                 [
