@@ -59,6 +59,16 @@ use yii\helpers\Url;
                         <?php endforeach;?>
                     </nav>
                 </div>
+                <div class="el-col el-col-24">
+                    <div class="header-info">
+                        <div class="header-info__text">
+                            TEXT
+                        </div>
+                        <div class="header-info__tel">
+                            <div>022 822 038</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <nav class="header-entity-nav">
                 <a href="/plans"><?=Yii::t("app/header", "nav-plans") ?></a>
