@@ -25,6 +25,12 @@ Class Pages extends ActiveRecord
         return $this->{$var};
     }
 
+    public function getContent()
+    {
+        $var = "content_" . Yii::$app->language;
+        return $this->{$var};
+    }
+
     public function getMetaTitle()
     {
         $var = "meta_title_" . Yii::$app->language;

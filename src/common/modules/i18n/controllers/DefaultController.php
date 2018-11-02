@@ -60,6 +60,20 @@ class DefaultController extends Controller
     }
 
     /**
+     * @param $id
+     * @return Response
+     * @throws NotFoundHttpException
+     * @throws \Throwable
+     * @throws \yii\db\StaleObjectException
+     */
+    public function actionDelete($id)
+    {
+        $this->findModel($id)->delete();
+
+        return $this->redirect(['index']);
+    }
+
+    /**
      * @param array|integer $id
      * @return SourceMessage|SourceMessage[]
      * @throws NotFoundHttpException

@@ -40,6 +40,7 @@ class Pages extends \yii\db\ActiveRecord
         return [
             [['slug', 'title_en'], 'required'],
             [['body_ro', 'body_en', 'body_ru'], 'string'],
+            [['content_ro', 'content_en', 'content_ru'], 'string'],
             [['slug', 'title_ro', 'title_en', 'title_ru', 'meta_title_ro', 'meta_title_en', 'meta_title_ru', 'meta_description_ro', 'meta_description_en', 'meta_description_ru'], 'string', 'max' => 255],
             [['slug'], 'unique'],
         ];

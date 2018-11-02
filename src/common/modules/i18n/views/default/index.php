@@ -73,7 +73,11 @@ echo Breadcrumbs::widget(['links' => [$this->title]]);
                         'class' => 'form-control',
                         'prompt' => ''
                     ])
-                ]
+                ],
+                [
+                    'class' => 'yii\grid\ActionColumn',
+                    'template' => '{update} ' . (Yii::$app->user->can('admin') ? '{delete}' : '')
+                ],
             ]
         ]);
         Pjax::end();

@@ -29,6 +29,7 @@ class Bootstrap implements BootstrapInterface
             $moduleId = $i18nModule->id;
             $app->getUrlManager()->addRules([
                 'translations/<id:\d+>' => $moduleId . '/default/update',
+                'translations/delete/<id:\d+>' => $moduleId . '/default/delete',
                 'translations/page/<page:\d+>' => $moduleId . '/default/index',
                 'translations' => $moduleId . '/default/index',
             ], false);
