@@ -32,10 +32,8 @@
         justify-content: center;
         flex-wrap: wrap;
       }
-      &__link {
-        flex-shrink: 0;
-      }
       &__img {
+        flex-shrink: 0;
         height: 30px;
         margin-right: 20px;
         @media (max-width: 410px) {
