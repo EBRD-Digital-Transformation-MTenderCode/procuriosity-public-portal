@@ -10,7 +10,7 @@ Class CssJsController extends Controller
 
     public function actionJs()
     {
-        $files = \yii\helpers\FileHelper::findFiles(Yii::getAlias('@frontend/web/js'),['only'=>['*.js'], 'recursive'=>FALSE]);
+        $files = FileHelper::findFiles(Yii::getAlias('@frontend/web/js'),['only'=>['*.js'], 'recursive'=>FALSE]);
         $out = '';
         foreach ($files as $file) {
             $fileName = strrchr($file, '/');
@@ -21,7 +21,7 @@ Class CssJsController extends Controller
 
     public function actionCss()
     {
-        $files = \yii\helpers\FileHelper::findFiles(Yii::getAlias('@frontend/web/css'),['only'=>['*.css'], 'recursive'=>FALSE]);
+        $files = FileHelper::findFiles(Yii::getAlias('@frontend/web/css'),['only'=>['*.css'], 'recursive'=>FALSE]);
         $out = '';
         foreach ($files as $file) {
             $fileName = strrchr($file, '/');
