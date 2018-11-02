@@ -34,6 +34,8 @@ AppAsset::register($this);
 
         <title>MTender Public Portal</title>
         <?php $this->head() ?>
+        <?= $this->render("/layouts/_include_css") ?>
+        <?= $this->render("/layouts/_include_js") ?>
     </head>
     <body>
         <?php $this->beginBody() ?>
