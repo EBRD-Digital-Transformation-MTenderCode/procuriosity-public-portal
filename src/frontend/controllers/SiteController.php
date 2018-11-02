@@ -40,4 +40,17 @@ class SiteController extends Controller
         ]);
     }
 
+    /**
+     * @return string
+     * @throws NotFoundHttpException
+     */
+    public function actionPublic()
+    {
+        $this->layout = 'main_page';
+
+        return $this->render('public', [
+
+        ]);
+    }
+
 }

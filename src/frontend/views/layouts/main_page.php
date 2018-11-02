@@ -39,17 +39,11 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-    MENU:
-    <?php foreach (\frontend\models\Pages::find()->orderBy('id')->all() as $item):?>
-        <?=Html::a($item->title, ['/pages/view', 'slug' => $item->slug])?> |
-    <?php endforeach;?>
-
-    <?=\common\components\LangWidget::widget()?>
-
-    <hr />
+<?= $this->render("/layouts/header") ?>
 
     <?= $content ?>
 
+<?= $this->render("/layouts/footer") ?>
 <?php $this->endBody() ?>
 
 </body>
