@@ -1,4 +1,5 @@
 <?php
+
 use frontend\helpers\File;
 
 $this->title = $model->metaTitle;
@@ -7,17 +8,16 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->metaDescri
 $this->registerCssFile(File::getNameWithCreatedTime('/css/static.css'));
 $this->registerJsFile(File::getNameWithCreatedTime('/js/static.js'));
 ?>
-
-<section class="el-container">
-    <div class="static">
-        <aside class="static-aside">
-            <div class="static-aside__title">
-                <?= $model->title ?>
-            </div>
-        </aside>
-        <section class="static-content">
-            <?= $model->body ?>
+<div class="static">
+    <div class="static-banner">
+        <section class="el-container">
+                <h1 class="static-banner_title">
+                    <?= $model->title ?>
+                </h1>
+            <section class="static-banner_text">
+                <?= $model->body ?>
+            </section>
         </section>
     </div>
-</section>
-
+    <?= $model->content ?>
+</div>
