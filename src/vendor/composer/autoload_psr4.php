@@ -19,6 +19,7 @@ return array(
     'ustudio\\service_mandatory\\' => array($vendorDir . '/ustudio/service_mandatory'),
     'rmrevin\\yii\\fontawesome\\' => array($vendorDir . '/rmrevin/yii2-fontawesome'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
+    'mihaildev\\elfinder\\' => array($vendorDir . '/mihaildev/yii2-elfinder'),
     'mihaildev\\ckeditor\\' => array($vendorDir . '/mihaildev/yii2-ckeditor'),
     'heggi\\slugwidget\\' => array($vendorDir . '/heggi/yii2-slugwidget'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),

@@ -102,4 +102,13 @@ return array (
       '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
     ),
   ),
+    'mihaildev/yii2-elfinder' =>
+        array(
+            'name' => 'mihaildev/yii2-elfinder',
+            'version' => '1.3.0.0',
+            'alias' =>
+                array(
+                    '@mihaildev/elfinder' => $vendorDir . '/mihaildev/yii2-elfinder',
+                ),
+        ),
 );
