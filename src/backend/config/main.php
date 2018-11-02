@@ -59,5 +59,27 @@ return [
             ],
         ],
     ],
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\Controller',
+            'access' => ['admin'],
+            'disabledCommands' => ['netmount'],
+            'roots' => [
+                [
+                    'baseUrl'=>'',
+                    'basePath'=>'@frontend/web',
+                    'path' => 'uploads/files',
+                    'name' => 'Files',
+                    'options' => [
+                        'uploadOverwrite' => false,
+                        'uploadAllow' => ['image'],
+                        'uploadOrder' => ['allow', 'deny'],
+                        'uploadMaxSize' => '30000K',
+                        'disabled' => ['rename', 'mkfile'],
+                    ],
+                ],
+            ],
+        ]
+    ],
     'params' => $params,
 ];
