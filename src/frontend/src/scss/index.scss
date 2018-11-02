@@ -12,6 +12,10 @@
 @import "components/header";
 @import "components/footer";
 
+@import "locale/en";
+@import "locale/ro";
+@import "locale/ru";
+
 body {
   display: flex;
   justify-content: space-between;
