@@ -27,7 +27,8 @@ const paths = {
 };
 
 const cleanBuildsTask = () => {
-    return src([`${paths.build}/js/`, `${paths.build}/css/`, `${paths.build}/img/`])
+    return src([`${paths.build}/js/static`, `${paths.build}/css/static`, `${paths.build}/img/`])
+        .pipe(clean({force: true}))
 };
 
 const scssTask = () => {
@@ -43,7 +44,7 @@ const scssTask = () => {
         ]))
         .pipe(base64())
         .pipe(sourcemaps.write("."))
-        .pipe(dest(`${paths.build}/css/`));
+        .pipe(dest(`${paths.build}/css/static`));
 };
 
 const jsTask = () => {
@@ -54,7 +55,7 @@ const jsTask = () => {
         }))
         .pipe(uglify())
         .pipe(sourcemaps.write("."))
-        .pipe(dest(`${paths.build}/js/`));
+        .pipe(dest(`${paths.build}/js/static`));
 };
 
 const imageminTask = () => {

@@ -4,8 +4,8 @@ use frontend\helpers\File;
 $this->title = $model->metaTitle;
 $this->registerMetaTag(['name' => 'description', 'content' => $model->metaDescription]);
 
-$this->registerCssFile(File::getNameWithCreatedTime('/css/static.css'));
-$this->registerJsFile(File::getNameWithCreatedTime('/js/static.js'));
+$this->registerCssFile(File::getNameWithCreatedTime('/css/static/static.css'));
+$this->registerJsFile(File::getNameWithCreatedTime('/js/static/static.js'));
 ?>
 
 <section class="el-container">
