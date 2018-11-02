@@ -36,15 +36,16 @@
         flex-shrink: 0;
         height: 30px;
         margin-right: 20px;
-        @media (max-width: 410px) {
-          margin-right: 0;
+        @media (max-width: 450px) {
+          margin: 0;
         }
       }
       &__text {
         line-height: 1.1;
         font-size: 11px;
-        @media (max-width: 430px) {
+        @media (max-width: 450px) {
           text-align: center;
+          width: 100%;
         }
       }
     }
@@ -76,14 +77,16 @@
     flex-wrap: wrap;
     max-width: 70%;
     text-align: right;
+    margin-left: auto;
     @media (max-width: 990px) {
       max-width: 90%;
       justify-content: center;
     }
     @media (max-width: 550px) {
       display: block;
-      top: 100%;
+      top: calc(100% - 40px);
       width: 100%;
+      max-width: 100%;
       background-color: #efefef;
       z-index: 2;
       position: absolute;
@@ -129,8 +132,9 @@
     align-items: flex-end;
     flex-shrink: 0;
     margin-left: auto;
-    @media (max-width: 768px) {
-      width: 100%;
+    @media (max-width: 990px) {
+      justify-content: center;
+      margin: 20px auto 0;
     }
     &__text {
       margin-right: 15px;
@@ -169,7 +173,7 @@
       @media (max-width: 730px) {
         width: 100%;
         margin: 5px 0;
-        padding: 10px;
+        padding: 15px;
       }
       @media (max-width: 350px) {
         font-size: 13px;
@@ -198,40 +202,44 @@
     display: none;
     @media (max-width: 550px) {
       display: block;
-      width: 35px;
-      height: 35px;
+      height: 30px;
       padding-left: 40px;
-      &-hamb{
-        background: repeating-linear-gradient(
-        #fff,
-        #fff 5px,
-        #999 5px,
-        #999 10px);
-        background-size: 30px;
-        background-repeat-x: no-repeat;
-        transition: 0.8s;
-      }
-      &-close{
-        background:
-                linear-gradient(45deg, transparent, transparent 21px,
-                        #999 21px,
-                        #999 26px,
-                        transparent 26px),
-
-                linear-gradient(-45deg, transparent, transparent 21px,
-                        #999 21px,
-                        #999 26px,
-                        transparent 26px);
-
-        background-size: 26px;
-        background-repeat-x: no-repeat;
-        transition: 0.8s;
-      }
       cursor: pointer;
       border: none;
       text-transform: uppercase;
+      font-size: 16px;
       font-weight: 700;
+      line-height: 2;
       color: #999;
+      &-hamb {
+        background-image: repeating-linear-gradient(
+                        #fff,
+                        #fff 5px,
+                        #999 5px,
+                        #999 9px);
+        background-size: 30px;
+        background-repeat-x: no-repeat;
+        background-position: 0 center;
+        transition: 0.8s;
+      }
+      &-close {
+        background-image: linear-gradient(
+                        45deg, transparent,
+                        transparent 19px,
+                        #999 0,
+                        #999 24px,
+                        transparent 0),
+        linear-gradient(
+                        -45deg, transparent,
+                        transparent 19px,
+                        #999 0,
+                        #999 24px,
+                        transparent 0);
+        background-size: 30px;
+        background-repeat-x: no-repeat;
+        background-position: 0 center;
+        transition: 0.8s;
+      }
     }
   }
 }

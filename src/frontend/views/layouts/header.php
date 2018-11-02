@@ -60,7 +60,7 @@ use yii\helpers\Url;
                 <div class="el-col el-col-24">
                     <div class="header-info">
                         <div class="header-info__text">
-                            TEXT
+                            <?=Yii::t("app/header", "info") ?>:
                         </div>
                         <div class="header-info__tel">
                             <div>022 822 038</div>
