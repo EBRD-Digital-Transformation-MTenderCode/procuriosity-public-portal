@@ -46,11 +46,7 @@ class SiteController extends Controller
      */
     public function actionPublic()
     {
-        $this->layout = 'main_page';
-
-        return $this->render('public', [
-
-        ]);
+        return $this->renderPartial('//layouts/main_page');
     }
 
 }

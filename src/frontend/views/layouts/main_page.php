@@ -6,7 +6,7 @@ use yii\helpers\Html;
 use frontend\assets\AppAsset;
 use frontend\helpers\File;
 
-AppAsset::register($this);
+//AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -39,11 +39,8 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<?= $this->render("/layouts/header") ?>
+<div id="app"></div>
 
-    <?= $content ?>
-
-<?= $this->render("/layouts/footer") ?>
 <?php $this->endBody() ?>
 
 </body>
