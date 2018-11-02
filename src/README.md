@@ -14,6 +14,6 @@ php yii migrate - Остальные миграции
 
 ./yii i18n/import @frontend/messages - Импорт переводов сайта
 
-php yii css-js/js
+php yii css-js/js - Подключает все js файлы и записывает в шаблон
 
-php yii css-js/css
+php yii css-js/css - Подключает все css файлы и записывает в шаблон
