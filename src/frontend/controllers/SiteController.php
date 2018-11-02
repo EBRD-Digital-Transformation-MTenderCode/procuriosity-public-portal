@@ -40,4 +40,13 @@ class SiteController extends Controller
         ]);
     }
 
+    /**
+     * @return string
+     * @throws NotFoundHttpException
+     */
+    public function actionPublic()
+    {
+        return $this->renderPartial('//layouts/main_page');
+    }
+
 }

@@ -6,7 +6,7 @@ use yii\helpers\Html;
 use frontend\assets\AppAsset;
 use frontend\helpers\File;
 
-AppAsset::register($this);
+//AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -39,16 +39,7 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-    MENU:
-    <?php foreach (\frontend\models\Pages::find()->orderBy('id')->all() as $item):?>
-        <?=Html::a($item->title, ['/pages/view', 'slug' => $item->slug])?> |
-    <?php endforeach;?>
-
-    <?=\common\components\LangWidget::widget()?>
-
-    <hr />
-
-    <?= $content ?>
+<div id="app"></div>
 
 <?php $this->endBody() ?>
 

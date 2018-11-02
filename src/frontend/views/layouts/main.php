@@ -31,9 +31,12 @@ AppAsset::register($this);
         <meta name=msapplication-TileImage content=/img/favicon/ms-icon-144x144.png>
         <meta name=msapplication-TileColor content=#ffffff>
         <meta name=theme-color content=#ffffff>
-
+        <?=\common\components\HreflangWidget::widget()?>
         <title>MTender Public Portal</title>
+
         <?php $this->head() ?>
+        <?= $this->render("/layouts/_include_css") ?>
+        <?= $this->render("/layouts/_include_js") ?>
     </head>
     <body>
         <?php $this->beginBody() ?>

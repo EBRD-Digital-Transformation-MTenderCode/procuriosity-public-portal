@@ -25,7 +25,7 @@ class UrlRule extends BaseObject implements UrlRuleInterface
                 'url' => $url . "?" . $getParams
             ];
         } else {
-            $route = 'site/index';
+            $route = 'site/public';
         }
 
         //$route = 'site/index';

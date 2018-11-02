@@ -13,3 +13,7 @@ php yii migrate - Остальные миграции
 ./yii migrate --migrationPath=@common/modules/i18n/migrations - Миграция создания таблиц переводов сообщений Yii::t()
 
 ./yii i18n/import @frontend/messages - Импорт переводов сайта
+
+php yii css-js/js - Подключает все js файлы и записывает в шаблон
+
+php yii css-js/css - Подключает все css файлы и записывает в шаблон

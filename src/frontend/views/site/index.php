@@ -6,10 +6,10 @@ use frontend\models\News;
 use yii\helpers\StringHelper;
 
 $this->registerCssFile('https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css');
-$this->registerCssFile(File::getNameWithCreatedTime('/css/main.css'));
+$this->registerCssFile(File::getNameWithCreatedTime('/css/static/main.css'));
 
 $this->registerJsFile('https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/min/tiny-slider.js', ['position' => yii\web\View::POS_END]);
-$this->registerJsFile(File::getNameWithCreatedTime('/js/main.js'));
+$this->registerJsFile(File::getNameWithCreatedTime('/js/static/main.js'));
 
 ?>
 
