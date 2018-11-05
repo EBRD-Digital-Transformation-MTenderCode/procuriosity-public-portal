@@ -8,7 +8,11 @@ use yii\bootstrap\Tabs;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Pages */
 /* @var $form yii\widgets\ActiveForm */
-$this->registerJs("$('.unlockslug').remove();", yii\web\View::POS_READY);
+if(Yii::$app->user->can('admin')) {
+    $this->registerJs("$('.unlockslug').text('edit');", yii\web\View::POS_READY);
+} else {
+    $this->registerJs("$('.unlockslug').remove();", yii\web\View::POS_READY);
+}
 ?>
 
 <div class="pages-form">
@@ -16,6 +20,10 @@ $this->registerJs("$('.unlockslug').remove();", yii\web\View::POS_READY);
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->errorSummary($model); ?>
+
+    <?php if(Yii::$app->user->can('admin')):?>
+        <?= $form->field($model, 'menu')->checkbox()?>
+    <?php endif;?>
 
     <?= $form->field($model, 'slug')->widget(\heggi\slugwidget\SlugWidget::className(), ['title' => 'title_en']) ?>
 
