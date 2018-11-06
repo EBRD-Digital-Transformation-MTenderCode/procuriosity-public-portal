@@ -26,6 +26,7 @@ class UrlRule extends BaseObject implements UrlRuleInterface
             ];
         } else {
             $route = 'site/public';
+            $outParams['type'] = $pathInfo;
         }
 
         //$route = 'site/index';
@@ -35,6 +36,9 @@ class UrlRule extends BaseObject implements UrlRuleInterface
 
     public function createUrl($manager, $route, $params)
     {
+        if ($route === 'site/public' & isset($params['type'])) {
+            return $params['type'];
+        }
         return false;
     }
 

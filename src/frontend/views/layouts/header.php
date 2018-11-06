@@ -69,9 +69,9 @@ use yii\helpers\Url;
                 </div>
             </div>
             <nav class="header-entity-nav">
-                <a <?=(Yii::$app->request->getPathInfo()=='plans')?'class="is-active"':''?> href="<?=Url::to(['/plans'])?>"><?=Yii::t("app/header", "nav-plans") ?></a>
-                <a <?=(Yii::$app->request->getPathInfo()=='tenders')?'class="is-active"':''?> href="<?=Url::to(['/tenders'])?>"> <?=Yii::t("app/header", "nav-tenders") ?></a>
-                <a <?=(Yii::$app->request->getPathInfo()=='contracts')?'class="is-active"':''?> href="<?=Url::to(['/contracts'])?>"><?=Yii::t("app/header", "nav-contracts") ?></a>
+                <a <?=(Yii::$app->request->getPathInfo()=='plans')?'class="is-active"':''?> href="<?=Url::to(['/site/public', 'type' => 'plans'])?>"><?=Yii::t("app/header", "nav-plans") ?></a>
+                <a <?=(Yii::$app->request->getPathInfo()=='tenders')?'class="is-active"':''?> href="<?=Url::to(['/site/public', 'type' => 'tenders'])?>"> <?=Yii::t("app/header", "nav-tenders") ?></a>
+                <a <?=(Yii::$app->request->getPathInfo()=='contracts')?'class="is-active"':''?> href="<?=Url::to(['/site/public', 'type' => 'contracts'])?>"><?=Yii::t("app/header", "nav-contracts") ?></a>
             </nav>
         </section>
     </div>
