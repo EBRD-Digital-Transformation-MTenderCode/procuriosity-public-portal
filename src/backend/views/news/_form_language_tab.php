@@ -12,6 +12,7 @@ use mihaildev\elfinder\ElFinder;
         'editorOptions' => ElFinder::ckeditorOptions('elfinder', [
             'preset' => 'full',
             'inline' => false,
+            'allowedContent' => true,
             'language' => 'en'
         ]),
     ]) ?>
