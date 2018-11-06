@@ -455,3 +455,42 @@
     }
   }
 }
+
+.main-news {
+  padding-top: 20px;
+  padding-bottom: 52px;
+  &__title {
+    margin-bottom: 18px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  &__cards-wp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media (max-width: 940px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__card {
+    max-width: 289px;
+    margin: 0 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    @media (max-width: 940px) {
+      margin: 20px;
+    }
+  }
+  &__img {
+    margin-bottom: 22px;
+  }
+  &__text {
+    line-height: 1.65;
+    font-size: 13px;
+  }
+}
