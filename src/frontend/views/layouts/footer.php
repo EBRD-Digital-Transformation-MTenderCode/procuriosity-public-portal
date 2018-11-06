@@ -45,7 +45,7 @@ use yii\helpers\Url;
                         <?=Yii::t("app/footer", "info") ?>:
                     </div>
                     <div class="footer-info__tel">
-                        <a href="tel:+373022822038">022 822 038</a>
+                        <a href="tel:+373022822038" id="footer-phone">022 822 038</a>
                     </div>
                 </div>
             </div>

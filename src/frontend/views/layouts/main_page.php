@@ -6,7 +6,6 @@ use yii\helpers\Html;
 use frontend\assets\AppAsset;
 use frontend\helpers\File;
 
-//AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -32,10 +31,9 @@ use frontend\helpers\File;
         <meta name=msapplication-TileColor content=#ffffff>
         <meta name=theme-color content=#ffffff>
 
-        <title>MTender Public Portal - <?= Html::encode($this->title) ?></title>
+        <?=\common\components\HreflangWidget::widget()?>
 
-        <?/*= $this->render("/layouts/_include_css") */?><!--
-        --><?/*= $this->render("/layouts/_include_js") */?>
+        <title>MTender Public Portal - <?= Html::encode($this->title) ?></title>
 
         <link href=/js/ContractPage.js rel=prefetch>
         <link href=/js/TenderPage.js rel=prefetch>
@@ -49,18 +47,23 @@ use frontend\helpers\File;
 
         <link href=/css/app.css rel=stylesheet>
 
+        <link href=/css/static/index.css rel="stylesheet">
+
         <?php $this->head() ?>
     </head>
     <body>
         <?php $this->beginBody() ?>
+        <?= $this->render("/layouts/header") ?>
 
         <noscript>
             <strong>We're sorry but MTender Public Portal doesn't work properly without JavaScript enabled. Please  it to continue.</strong>
         </noscript>
         <div id="app"></div>
 
+        <?= $this->render("/layouts/footer") ?>
         <script src=/js/chunk-vendors.js> </script>
-        <script src=/js/app.js> </script>
+        <script src=/js/app.js></script>
+        <script src="/js/static/index.js"></script>
         <?php $this->endBody() ?>
     </body>
 </html>

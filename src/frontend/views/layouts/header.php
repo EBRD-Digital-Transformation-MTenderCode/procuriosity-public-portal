@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
 
-<header class="el-header header">
+<header class="header">
     <div class="header-first">
         <section class="el-container">
             <div class="el-row">
@@ -63,15 +63,16 @@ use yii\helpers\Url;
                             <?=Yii::t("app/header", "info") ?>:
                         </div>
                         <div class="header-info__tel">
-                            <div>022 822 038</div>
+                            <a href="tel:+373022822038" id="header-phone">022 822 038</a>
                         </div>
                     </div>
                 </div>
             </div>
             <nav class="header-entity-nav">
-                <a href="/plans"><?=Yii::t("app/header", "nav-plans") ?></a>
-                <a href="/tenders"> <?=Yii::t("app/header", "nav-tenders") ?></a>
-                <a href="/contracts"><?=Yii::t("app/header", "nav-contracts") ?></a>
+                <!-- @TODO need add active class "is-active" -->
+                <a href="<?=Url::to(['/plans'])?>"><?=Yii::t("app/header", "nav-plans") ?></a>
+                <a href="<?=Url::to(['/tenders'])?>"> <?=Yii::t("app/header", "nav-tenders") ?></a>
+                <a href="<?=Url::to(['/contracts'])?>"><?=Yii::t("app/header", "nav-contracts") ?></a>
             </nav>
         </section>
     </div>
