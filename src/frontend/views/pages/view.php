@@ -1,5 +1,5 @@
 <?php
-
+use yii\helpers\Html;
 use frontend\helpers\File;
 use frontend\models\News;
 use yii\helpers\StringHelper;
