@@ -1,2 +1,2 @@
-"use strict";document.addEventListener("DOMContentLoaded",function(){var e=document.querySelector(".about__partners_links");if(e)for(var n=e.children.length;n>=0;n--)e.appendChild(e.children[Math.random()*n|0])});
+"use strict";document.addEventListener("DOMContentLoaded",function(){var e=document.querySelector(".about__partners_links");if(e)for(var t=e.children.length;t>=0;t--)e.appendChild(e.children[Math.random()*t|0]);var n=document.getElementById("learnMore"),o=document.getElementById("more");n&&o&&n.addEventListener("click",function(){window.scroll({behavior:"smooth",left:0,top:o.offsetTop})})});
 //# sourceMappingURL=static.js.map

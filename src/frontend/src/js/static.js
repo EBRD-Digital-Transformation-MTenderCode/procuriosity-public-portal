@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const partnersContainer = document.querySelector(".about__partners_links");
 
@@ -7,4 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
          }
      }
 
+    const learnMoreButton = document.getElementById("learnMore");
+    const learnMoreBlock = document.getElementById("more");
+
+    if (learnMoreButton && learnMoreBlock) {
+        learnMoreButton.addEventListener("click", () => {
+            window.scroll({
+                behavior: "smooth",
+                left: 0,
+                top: learnMoreBlock.offsetTop
+            });
+        })
+    }
+
 });
+
