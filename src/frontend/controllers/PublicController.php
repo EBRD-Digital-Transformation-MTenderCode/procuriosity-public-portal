@@ -11,25 +11,6 @@ class PublicController extends Controller
 {
 
     /**
-     * @todo УДАЛИТЬ!!!!
-     * @return array
-     */
-    public function behaviors()
-    {
-        return [
-            'corsFilter' => [
-                'class' => \yii\filters\Cors::className(),
-                'cors' => [
-                    'Origin' => ['*'],
-                    'Access-Control-Request-Method' => ['GET'],
-                    'Access-Control-Max-Age' => 3600,
-                ],
-
-            ],
-        ];
-    }
-
-    /**
      * @param string $url
      * @return null
      * @throws \yii\web\HttpException
