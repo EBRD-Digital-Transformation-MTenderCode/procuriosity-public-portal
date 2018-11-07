@@ -84,7 +84,7 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/static/main.js'));
                     </div>
                 </div>
             </div>
-            <a href="<?=Url::to(['/pages/view', 'slug'=>'join-view'])?>" class="main__join-button"><?=Yii::t("app/main", "join") ?></a>
+            <a href="<?=Url::to(['/pages/view', 'slug'=>'join-mtender'])?>" class="main__join-button"><?=Yii::t("app/main", "join") ?></a>
         </section>
     </div>
     <section class="el-container is-vertical">
