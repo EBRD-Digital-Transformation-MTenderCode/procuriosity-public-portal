@@ -339,6 +339,7 @@
   }
   &-for-civil {
     padding-top: 50px;
+    text-align: justify;
   }
   &-security {
     text-align: justify;
@@ -430,18 +431,22 @@
   .organizations {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+     justify-content: space-around;
+    }
     &-item {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       width: calc(100% / 6);
       margin: 20px;
-      &:first-child {
-        margin-left: 0;
+      @media (max-width: 767px) {
+        width: calc(100% / 3);
       }
-      &:last-child {
-        margin-right: 0;
-      }
+
+
       &__img {
         display: flex;
         justify-content: center;
@@ -476,12 +481,6 @@
   &__card {
     max-width: 289px;
     margin: 0 20px;
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
     @media (max-width: 940px) {
       margin: 20px;
     }

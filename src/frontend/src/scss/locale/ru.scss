@@ -13,6 +13,11 @@ html[lang="ru"]{
       }
     }
   }
+  .main__join-button{
+    @media (max-width: 350px) {
+      padding: 14px 28px;
+    }
+  }
   .footer{
     &-nav > div{
       @media (max-width: 650px) {

@@ -38,16 +38,15 @@ use frontend\helpers\File;
         <link href=/js/ContractPage.js rel=prefetch>
         <link href=/js/TenderPage.js rel=prefetch>
 
-        <link href=/css/app.css rel=preload as=style>
         <link href=/css/chunk-vendors.css rel=preload as=style>
+        <link href=/css/app.css rel=preload as=style>
 
         <link href=/js/app.js rel=preload as=script>
         <link href=/js/chunk-vendors.js rel=preload as=script>
+
         <link href=/css/chunk-vendors.css rel=stylesheet>
-
-        <link href=/css/app.css rel=stylesheet>
-
         <link href=/css/static/index.css rel="stylesheet">
+        <link href=/css/app.css rel=stylesheet>
 
         <?php $this->head() ?>
     </head>
