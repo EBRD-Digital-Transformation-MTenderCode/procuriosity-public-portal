@@ -1,1 +1,0 @@
-<script src="/js/chunk-vendors.js?v=1541168207"></script><script src="/js/app.js?v=1541168207"></script><script src="/js/ContractPage.js?v=1541168207"></script><script src="/js/TenderPage.js?v=1541168207"></script>
