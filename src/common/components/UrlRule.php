@@ -24,14 +24,14 @@ class UrlRule extends BaseObject implements UrlRuleInterface
             $outParams = [
                 'url' => $url . "?" . $getParams
             ];
-        } else {
+        } elseif(in_array($pathInfo, ['plans', 'tenders', 'contracts'])) {
             $route = 'site/public';
             $outParams['type'] = $pathInfo;
         }
 
         //$route = 'site/index';
 
-        return ($route) ? [$route, $outParams] : false;
+        return (!empty($route)) ? [$route, $outParams] : false;
     }
 
     public function createUrl($manager, $route, $params)

@@ -130,7 +130,6 @@
   &-info {
     display: flex;
     align-items: flex-end;
-    flex-shrink: 0;
     margin-left: auto;
     @media (max-width: 990px) {
       justify-content: center;

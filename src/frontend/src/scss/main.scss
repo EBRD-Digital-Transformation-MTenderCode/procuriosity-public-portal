@@ -31,7 +31,7 @@
   }
   .carousel-indicators {
     margin-left: 20px;
-    @media (max-width: 560px){
+    @media (max-width: 560px) {
       display: inline-block;
       width: 100%;
       margin: 5px 0 0;
@@ -57,14 +57,14 @@
   }
   .carousel__item {
     display: inline-flex !important;
-    &:last-child{
-      & > .slide-item{
-        & > div:last-child{
+    &:last-child {
+      & > .slide-item {
+        & > div:last-child {
           @media (max-width: 600px) {
             width: 100%;
             text-align: center;
           }
-          & > div{
+          & > div {
             @media (max-width: 600px) {
               margin-top: 10px;
               display: inline-block;
@@ -175,7 +175,7 @@
         @media (max-width: 440px) {
           width: 100%;
           text-align: center;
-          & > div{
+          & > div {
             display: inline-block;
           }
         }
@@ -217,12 +217,7 @@
     &__card {
       max-width: 289px;
       margin: 0 20px;
-      &:first-child {
-        margin-left: 0;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
+
       @media (max-width: 940px) {
         margin: 20px;
       }
@@ -253,6 +248,11 @@
       text-align: center;
       line-height: 1.75;
       font-size: 15px;
+      @media (max-width: 500px) {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
     &__cards-wp {
       display: flex;
