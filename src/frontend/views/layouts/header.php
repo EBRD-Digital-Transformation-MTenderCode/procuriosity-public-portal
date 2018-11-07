@@ -44,7 +44,9 @@ use yii\helpers\Url;
                             class="header-logo-mtender__img"
                         >
                     </a>
-                    <button class="header-dropdown header-dropdown-hamb" id="header-dropdown">menu</button>
+                    <button class="header-dropdown header-dropdown-hamb" id="header-dropdown">
+                        <?=Yii::t("app/header", "menu") ?>:
+                    </button>
                     <nav class="header-static-nav" id="header-static-nav">
                         <?php foreach (\frontend\models\Pages::getItems() as $item):?>
                             <?php
