@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    const partnersContainer = document.querySelector(".about__partners_links");
+    const partnersContainer = document.querySelector(".static-about__links");
 
      if (partnersContainer) {
          for (let i = partnersContainer.children.length; i >= 0; i--) {

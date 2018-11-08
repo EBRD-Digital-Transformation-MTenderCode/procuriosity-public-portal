@@ -209,20 +209,20 @@
               position: absolute;
               top: 0;
               display: block;
-              width: 20px;
-              height: 20px;
+              width: 15px;
+              height: 15px;
               background-color: #2383c5;
               transform: rotate(45deg);
-              border: 3px solid #fff;
+              outline: 5px solid #fff;
             }
             .date_left:after {
-              right: -56px;
+              right: -53px;
               @media (max-width: 640px) {
-                left: -56px;
+                left: -53px;
               }
             }
             .date_right:after {
-              left: -56px;
+              left: -53px;
             }
           }
           &_right {
