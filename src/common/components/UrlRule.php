@@ -1,6 +1,7 @@
 <?php
 
 namespace common\components;
+
 use yii\base\BaseObject;
 use yii\web\UrlRuleInterface;
 
@@ -17,16 +18,23 @@ class UrlRule extends BaseObject implements UrlRuleInterface
     {
         $outParams = [];
         $pathInfo = $request->getPathInfo();
+
         if (stripos($pathInfo, "public") === 0) {
             $route = 'public/index';
-            $url = str_replace("public","",$pathInfo);
+            $url = str_replace("public", "", $pathInfo);
             $getParams = $request->getQueryString();
             $outParams = [
                 'url' => $url . "?" . $getParams
             ];
-        } elseif(in_array($pathInfo, ['plans', 'tenders', 'contracts'])) {
+        } elseif (strpos($pathInfo, 'plans') !== false) {
             $route = 'site/public';
-            $outParams['type'] = $pathInfo;
+            $outParams['type'] = 'plans';
+        } elseif (strpos($pathInfo, 'tenders') !== false) {
+            $route = 'site/public';
+            $outParams['type'] = 'tenders';
+        } elseif (strpos($pathInfo, 'contracts') !== false) {
+            $route = 'site/public';
+            $outParams['type'] = 'contracts';
         }
 
         //$route = 'site/index';
