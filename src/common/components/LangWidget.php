@@ -23,18 +23,19 @@ class LangWidget extends Widget
         return Url::to($params);
     }
 
+    //' . $this->translateCurrentRequest('ru') . '
     public function run()
     {
         return '
             <ul class="el-dropdown-menu el-popper locale-dropdown-menu el-dropdown-menu--small" id="locale-menu">
                 <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
-                    <a class="locale-lang" href="' . $this->translateCurrentRequest('ro') . '">' . Yii::t('app/language', 'ro') . '</a>
+                    <a class="locale-lang" data-lang="ro" href="">' . Yii::t('app/language', 'ro') . '</a>
                 </li>
                 <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
-                    <a class="locale-lang" href="' . $this->translateCurrentRequest('en') . '">' . Yii::t('app/language', 'en') . '</a>
+                    <a class="locale-lang" data-lang="en" href="">' . Yii::t('app/language', 'en') . '</a>
                 </li>
                 <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
-                    <a class="locale-lang" href="' . $this->translateCurrentRequest('ru') . '">' . Yii::t('app/language', 'ru') . '</a>
+                    <a class="locale-lang" data-lang="ru" href="">' . Yii::t('app/language', 'ru') . '</a>
                 </li>
             </ul>';
     }
