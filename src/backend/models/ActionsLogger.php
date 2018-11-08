@@ -27,22 +27,15 @@ class ActionsLogger extends \yii\db\ActiveRecord
         return 'actions_logger';
     }
 
-    public function behaviors()
-    {
-        return [
-            TimestampBehavior::className(),
-        ];
-    }
-
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            [['ip', 'user_id', 'username', 'type', 'method'], 'required'],
+            [['ip', 'user_id', 'username', 'type', 'method', 'created_at'], 'required'],
             [['ip'], 'string'],
-            [['user_id', 'created_at', 'updated_at'], 'integer'],
+            [['user_id', 'created_at'], 'integer'],
             [['data'], 'safe'],
             [['username'], 'string', 'max' => 255],
             [['type', 'method'], 'string', 'max' => 50],

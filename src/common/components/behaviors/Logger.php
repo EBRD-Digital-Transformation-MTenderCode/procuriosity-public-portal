@@ -46,6 +46,7 @@ class Logger extends Behavior
         $model->type_id = $event->sender->id;
         $model->method = $method;
         $model->data = json_encode($event->sender->getAttributes());
+        $model->created_at = time();
         $model->save();
     }
 }

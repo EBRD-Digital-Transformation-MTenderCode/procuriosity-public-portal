@@ -18,7 +18,7 @@ class ActionsLoggerSearch extends ActionsLogger
     public function rules()
     {
         return [
-            [['user_id', 'type_id', 'created_at', 'updated_at'], 'integer'],
+            [['user_id', 'type_id', 'created_at'], 'integer'],
             [['ip', 'username', 'type', 'data'], 'safe'],
         ];
     }
@@ -68,7 +68,6 @@ class ActionsLoggerSearch extends ActionsLogger
             'user_id' => $this->user_id,
             'type_id' => $this->type_id,
             'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
         ]);
 
         $query->andFilterWhere(['ilike', 'ip', $this->ip])

@@ -24,7 +24,6 @@ class m181108_105937_actions_logger extends Migration
                 'method' => $this->string(50)->notNull(),
                 'data' => 'json NULL',
                 'created_at' => $this->integer()->notNull(),
-                'updated_at' => $this->integer()->notNull(),
             ]
         );
 
