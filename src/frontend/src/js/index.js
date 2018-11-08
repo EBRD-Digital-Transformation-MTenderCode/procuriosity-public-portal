@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         langsLinks.forEach(item => {
             const lang = item.getAttribute("data-lang");
 
-            item.setAttribute("href", lang === "ro" ? `${pathWithoutLang}` : `/${lang}${pathWithoutLang}`);
+            item.setAttribute("href", lang === "ro" ? pathWithoutLang ? pathWithoutLang : "/" : `/${lang}${pathWithoutLang}`);
         });
 
     });
