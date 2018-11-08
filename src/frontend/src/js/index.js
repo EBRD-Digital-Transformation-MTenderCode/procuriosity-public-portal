@@ -25,8 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         langsLinks.forEach(item => {
             const lang = item.getAttribute("data-lang");
-
             item.setAttribute("href", lang === "ro" ? pathWithoutLang ? pathWithoutLang : "/" : `/${lang}${pathWithoutLang}`);
+            if ((/\/en\/|\/ru\//).test(window.location)) {
+                const langFromUrl = window.location.pathname.match(/\/en\/|\/ru\//)[0].replace(/\//g, "");
+                if(langFromUrl === lang ){
+                    item.classList.add("active");
+                    console.log(item + " add")
+                }
+                else {
+                    item.classList.remove("active")
+                    console.log( item +" remove")
+                }
+            }
         });
 
     });
