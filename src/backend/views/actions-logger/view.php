@@ -18,13 +18,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
+            'created_at:datetime',
             'ip',
             'user_id',
             'username',
             'type',
             'type_id',
             'data',
-            'created_at:datetime',
         ],
     ]) ?>
 
