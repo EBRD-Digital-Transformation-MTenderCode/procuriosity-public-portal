@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const partnersContainer = document.querySelector(".static-about__links");
 
