@@ -45,7 +45,7 @@ use yii\helpers\Url;
                         >
                     </a>
                     <button class="header-dropdown header-dropdown-hamb" id="header-dropdown">
-                        <?=Yii::t("app/header", "menu") ?>:
+                        <?=Yii::t("app/header", "menu") ?>
                     </button>
                     <nav class="header-static-nav" id="header-static-nav">
                         <?php foreach (\frontend\models\Pages::getItems() as $item):?>
