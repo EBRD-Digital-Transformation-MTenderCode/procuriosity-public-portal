@@ -27,7 +27,7 @@ class NewsController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'roles' => ['admin'],
+                        'roles' => ['admin', 'content-manager'],
                     ],
                 ],
             ],

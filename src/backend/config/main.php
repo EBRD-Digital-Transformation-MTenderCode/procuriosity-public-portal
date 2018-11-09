@@ -21,6 +21,11 @@ return [
                     [
                         'allow' => true,
                         'roles' => ['admin']
+                    ],
+                    [
+                        'actions' => ['index', 'update'],
+                        'allow' => true,
+                        'roles' => ['content-manager']
                     ]
                 ]
             ]
