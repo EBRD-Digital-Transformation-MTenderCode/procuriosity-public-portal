@@ -22,6 +22,12 @@ Class AdminController extends Controller
 
     public function actionCreateUser()
     {
+        if(Yii::$app->db->createCommand('SELECT COUNT(*) FROM auth_assignment WHERE item_name=:item_name')
+            ->bindValue(':item_name', self::ADMIN_ROLE)
+            ->queryScalar()) {
+            exit("User with role " . self::ADMIN_ROLE . " already exist\n");
+        }
+
         $modelSignup = new SignupForm();
         $modelSignup->username = Yii::$app->params['admin_user'];
         $modelSignup->email = Yii::$app->params['admin_email'];
