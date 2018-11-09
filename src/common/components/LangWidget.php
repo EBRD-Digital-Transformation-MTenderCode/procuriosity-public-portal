@@ -29,7 +29,7 @@ class LangWidget extends Widget
         return '
             <ul class="el-dropdown-menu el-popper locale-dropdown-menu el-dropdown-menu--small" id="locale-menu">
                 <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
-                    <a class="locale-lang  active" data-lang="ro" href="">' . Yii::t('app/language', 'ro') . '</a>
+                    <a class="locale-lang active" data-lang="ro" href="">' . Yii::t('app/language', 'ro') . '</a>
                 </li>
                 <li tabindex="-1" class="el-dropdown-menu__item el-dropdown-menu__item--divided">
                     <a class="locale-lang" data-lang="en" href="">' . Yii::t('app/language', 'en') . '</a>
