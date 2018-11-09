@@ -29,7 +29,7 @@ class PagesController extends Controller
                         'roles' => ['admin'],
                     ],
                     [
-                        'actions' => ['index', 'view', 'create', 'update'],
+                        'actions' => ['index', 'view', 'update'],
                         'allow' => true,
                         'roles' => ['content-manager']
                     ]

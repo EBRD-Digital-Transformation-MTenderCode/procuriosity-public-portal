@@ -51,7 +51,11 @@ class DefaultController extends Controller
         $model = $this->findModel($id);
         $model->initMessages();
         if (Model::loadMultiple($model->messages, Yii::$app->getRequest()->post()) && Model::validateMultiple($model->messages)) {
-            $model->saveMessages(false);
+            $model->saveMessages();
+            foreach($model->messages as $language => $message) {
+                $model->translation[$language] = $message->translation;
+            }
+            $model->update(false);
             Yii::$app->getSession()->setFlash('success', Module::t('Translation updated'));
             return $this->redirect(['index']);
         } else {
@@ -68,7 +72,11 @@ class DefaultController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        foreach($model->messages as $language => $message) {
+            $model->translation[$language] = $message->translation;
+        }
+        $model->delete();
 
         return $this->redirect(['index']);
     }

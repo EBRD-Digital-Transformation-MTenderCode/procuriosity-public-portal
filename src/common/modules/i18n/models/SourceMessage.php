@@ -7,7 +7,6 @@
 
 namespace common\modules\i18n\models;
 
-use common\components\behaviors\Logger;
 use Yii;
 use yii\caching\Cache;
 use yii\db\ActiveRecord;
@@ -134,7 +133,7 @@ class SourceMessage extends ActiveRecord
     /**
      * Save messages
      */
-    public function saveMessages($link = true)
+    public function saveMessages()
     {
         /* @var \vintage\i18n\components\I18N $i18n */
         $i18n = Yii::$app->getI18n();
@@ -143,9 +142,7 @@ class SourceMessage extends ActiveRecord
 
         /* @var Message $message */
         foreach ($this->messages as $message) {
-            if($link) {
-                $this->link('messages', $message);
-            }
+            $this->link('messages', $message);
             $message->save();
 
             if ($i18n->enableCaching) {
