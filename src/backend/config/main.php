@@ -67,7 +67,7 @@ return [
     'controllerMap' => [
         'elfinder' => [
             'class' => 'mihaildev\elfinder\Controller',
-            'access' => ['admin'],
+            'access' => ['@'],
             'disabledCommands' => ['netmount'],
             'roots' => [
                 [
