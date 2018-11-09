@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     const headerPhone = document.getElementById("header-phone");
     const footerPhone = document.getElementById("footer-phone");
 
@@ -14,6 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    const html = document.querySelector("html");
+    let langFromUrl;
+
+    if ((/\/en|\/ru/).test(window.location)) {
+        langFromUrl = window.location.pathname.match(/\/en|\/ru/)[0].replace(/\//g, "");
+        html.setAttribute("lang", langFromUrl ? langFromUrl : "ro");
+    }
+
     const localeToggle = document.getElementById("locale-toggle");
     const langsLinks = document.querySelectorAll('.locale-dropdown-menu .locale-lang');
 
@@ -21,20 +30,19 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!localeMenu.classList.contains("show")) {
             localeMenu.classList.add("show");
         }
+
         const pathWithoutLang = window.location.pathname.replace(/\/ru|\/en/, "");
 
         langsLinks.forEach(item => {
             const lang = item.getAttribute("data-lang");
             item.setAttribute("href", lang === "ro" ? pathWithoutLang ? pathWithoutLang : "/" : `/${lang}${pathWithoutLang}`);
-            if ((/\/en\/|\/ru\//).test(window.location)) {
-                const langFromUrl = window.location.pathname.match(/\/en\/|\/ru\//)[0].replace(/\//g, "");
-                if(langFromUrl === lang ){
+
+            if (langFromUrl) {
+                if (langFromUrl === lang) {
                     item.classList.add("active");
-                    console.log(item + " add")
                 }
                 else {
                     item.classList.remove("active")
-                    console.log( item +" remove")
                 }
             }
         });

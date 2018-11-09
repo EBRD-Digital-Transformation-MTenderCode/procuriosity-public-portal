@@ -13,7 +13,7 @@ use yii\web\NotFoundHttpException;
 use yii\web\Response;
 use Yii;
 use common\modules\i18n\models\search\SourceMessageSearch;
-use common\modules\i18n\models\SourceMessage;
+use common\modules\i18n\models\SourceMessageAdmin;
 use common\modules\i18n\Module;
 
 /**
@@ -52,6 +52,10 @@ class DefaultController extends Controller
         $model->initMessages();
         if (Model::loadMultiple($model->messages, Yii::$app->getRequest()->post()) && Model::validateMultiple($model->messages)) {
             $model->saveMessages();
+            foreach($model->messages as $language => $message) {
+                $model->translation[$language] = $message->translation;
+            }
+            $model->update(false);
             Yii::$app->getSession()->setFlash('success', Module::t('Translation updated'));
             return $this->redirect(['index']);
         } else {
@@ -68,7 +72,11 @@ class DefaultController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        foreach($model->messages as $language => $message) {
+            $model->translation[$language] = $message->translation;
+        }
+        $model->delete();
 
         return $this->redirect(['index']);
     }
@@ -80,7 +88,7 @@ class DefaultController extends Controller
      */
     protected function findModel($id)
     {
-        $query = SourceMessage::find()->where('id = :id', [':id' => $id]);
+        $query = SourceMessageAdmin::find()->where('id = :id', [':id' => $id]);
         $models = is_array($id)
             ? $query->all()
             : $query->one();

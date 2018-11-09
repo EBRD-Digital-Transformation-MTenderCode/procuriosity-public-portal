@@ -2,6 +2,7 @@
 
 namespace backend\models;
 
+use common\components\behaviors\Logger;
 use Yii;
 
 /**
@@ -29,9 +30,15 @@ class Pages extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'pages';
+        return '{{%pages}}';
     }
 
+    public function behaviors()
+    {
+        return [
+            Logger::className()
+        ];
+    }
     /**
      * {@inheritdoc}
      */

@@ -21,6 +21,11 @@ return [
                     [
                         'allow' => true,
                         'roles' => ['admin']
+                    ],
+                    [
+                        'actions' => ['index', 'update'],
+                        'allow' => true,
+                        'roles' => ['content-manager']
                     ]
                 ]
             ]
@@ -62,7 +67,7 @@ return [
     'controllerMap' => [
         'elfinder' => [
             'class' => 'mihaildev\elfinder\Controller',
-            'access' => ['admin'],
+            'access' => ['@'],
             'disabledCommands' => ['netmount'],
             'roots' => [
                 [

@@ -8,7 +8,7 @@ use yii\bootstrap\Tabs;
 /* @var $this yii\web\View */
 /* @var $model backend\models\News */
 /* @var $form yii\widgets\ActiveForm */
-$this->registerJs("$('.unlockslug').text('change');", yii\web\View::POS_READY);
+$this->registerJs("$('.unlockslug').text('edit');", yii\web\View::POS_READY);
 ?>
 
 <div class="news-form">

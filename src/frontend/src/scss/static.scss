@@ -349,17 +349,11 @@
     }
     &__steps{
       ol {
-        counter-reset: issues 0;
         margin-bottom: 30px;
       }
       li {
         margin-bottom: 30px;
         text-align: left;
-      }
-      li :after {
-        counter-increment: issues 1;
-        content: "#  " counter(issues, decimal);
-        display: inline-block;
       }
     }
     &__decisions{

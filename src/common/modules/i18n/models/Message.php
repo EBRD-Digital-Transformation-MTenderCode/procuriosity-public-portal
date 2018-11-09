@@ -7,6 +7,7 @@
 
 namespace common\modules\i18n\models;
 
+use common\components\behaviors\Logger;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\db\ActiveRecord;
