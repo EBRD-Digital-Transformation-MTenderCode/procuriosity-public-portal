@@ -112,12 +112,12 @@ abbr {
 
 b,
 strong {
-    font-weight: inherit;
+    font-weight: 700;
 }
 
 i,
 em {
-    font-style: inherit;
+    font-style: italic;
 }
 
 dfn {
