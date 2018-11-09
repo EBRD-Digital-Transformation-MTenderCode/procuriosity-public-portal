@@ -19,6 +19,17 @@ use common\modules\i18n\models\query\SourceMessageQuery;
 
 class SourceMessageAdmin extends SourceMessage
 {
+    public $translation;
+
+    public function rules()
+    {
+        return array_merge(
+            parent::rules(),
+            [
+                ['translation', 'string']
+            ]
+        );
+    }
 
     public function behaviors()
     {
@@ -29,12 +40,11 @@ class SourceMessageAdmin extends SourceMessage
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getMessages()
+    public function attributes()
     {
-        return $this->hasMany(MessageAdmin::className(), ['id' => 'id'])
-            ->indexBy('language');
+        return array_merge(
+            parent::attributes(),
+            ['translation']
+        );
     }
 }
