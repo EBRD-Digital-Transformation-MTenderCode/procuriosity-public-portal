@@ -1,0 +1,36 @@
+html[lang="ru"]{
+  .header{
+    &-info{
+      @media (max-width: 400px) {
+        flex-wrap: wrap;
+      }
+      &__tel {
+        @media (max-width: 400px) {
+          margin: 0;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    &-static-nav{
+      @media (max-width: 400px) {
+        top: calc(100% - 50px);
+      }
+    }
+  }
+  .main__join-button{
+    @media (max-width: 350px) {
+      padding: 14px 28px;
+    }
+  }
+  .footer{
+    &-nav > div{
+      @media (max-width: 650px) {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+}

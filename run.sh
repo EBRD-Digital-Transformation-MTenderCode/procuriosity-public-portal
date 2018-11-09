@@ -11,7 +11,13 @@ then
 fi
 php /var/www/service/init --env=Production --overwrite=y
 
-#php /var/www/service/yii migrate --interactive=0
+php /var/www/service/yii migrate --interactive=0
+
+php yii admin/create-role
+
+php yii admin/create-user
+
+chmod -R 777 /var/www/service/frontend/web/uploads
 
 
 #/bin/bash
