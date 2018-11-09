@@ -72,7 +72,11 @@ class DefaultController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        foreach($model->messages as $language => $message) {
+            $model->translation[$language] = $message->translation;
+        }
+        $model->delete();
 
         return $this->redirect(['index']);
     }
