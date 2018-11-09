@@ -4,12 +4,17 @@ html[lang="ru"]{
       @media (max-width: 400px) {
         flex-wrap: wrap;
       }
-      &__text, &__tel {
+      &__tel {
         @media (max-width: 400px) {
           margin: 0;
           width: 100%;
           text-align: center;
         }
+      }
+    }
+    &-static-nav{
+      @media (max-width: 400px) {
+        top: calc(100% - 50px);
       }
     }
   }
