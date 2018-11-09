@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'username',
             'type',
             'type_id',
+            'method',
             'data',
         ],
     ]) ?>
