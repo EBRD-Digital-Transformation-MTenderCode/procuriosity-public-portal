@@ -31,10 +31,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        echo "<pre>";
-        print_r($_SERVER);
-        echo "</pre>";
-        die();
         if(!$modelPage = Pages::findOne(['slug'=>'main-page'])) {
             throw new NotFoundHttpException('Not main page');
         }
