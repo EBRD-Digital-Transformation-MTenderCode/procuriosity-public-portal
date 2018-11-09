@@ -2,6 +2,7 @@
 
 namespace backend\models;
 
+use common\components\behaviors\Logger;
 use common\components\Resize;
 use Yii;
 
@@ -35,7 +36,14 @@ class News extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'news';
+        return '{{%news}}';
+    }
+
+    public function behaviors()
+    {
+        return [
+            Logger::className()
+        ];
     }
 
     /**
