@@ -19,7 +19,8 @@ class ActionsLoggerSearch extends ActionsLogger
     {
         return [
             [['user_id', 'type_id', 'created_at'], 'integer'],
-            [['ip', 'username', 'type', 'data'], 'safe'],
+            [['ip', 'username', 'type', 'data', 'method'], 'safe'],
+            ['ip', 'ip']
         ];
     }
 
@@ -68,12 +69,14 @@ class ActionsLoggerSearch extends ActionsLogger
             'user_id' => $this->user_id,
             'type_id' => $this->type_id,
             'created_at' => $this->created_at,
+            'ip' => $this->ip
         ]);
 
-        $query->andFilterWhere(['ilike', 'ip', $this->ip])
+        $query
             ->andFilterWhere(['ilike', 'username', $this->username])
             ->andFilterWhere(['ilike', 'type', $this->type])
-            ->andFilterWhere(['ilike', 'data', $this->data]);
+            ->andFilterWhere(['ilike', 'data', $this->data])
+            ->andFilterWhere(['ilike', 'method', $this->method]);
 
         return $dataProvider;
     }
