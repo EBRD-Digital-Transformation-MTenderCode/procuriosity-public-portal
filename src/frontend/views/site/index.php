@@ -31,7 +31,7 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/static/main.js'));
                     <div class="slide-item">
                         <div class="slide-item__part">
                             <div class="slide-item__ico slide-item__ico_active-procedures"></div>
-                            <div class="slide-item__number">933</div>
+                            <div class="slide-item__number"><?=Yii::t("app/main", "slide-item1-number") ?></div>
                         </div>
                         <div class="slide-item__text">
                             <div><?=Yii::t("app/main", "slide-item1-text1") ?></div>
@@ -41,7 +41,7 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/static/main.js'));
                     <div class="slide-item">
                         <div class="slide-item__part">
                             <div class="slide-item__ico slide-item__ico_concluded-contracts"></div>
-                            <div class="slide-item__number">2’470</div>
+                            <div class="slide-item__number"><?=Yii::t("app/main", "slide-item2-number") ?></div>
                         </div>
                         <div class="slide-item__text">
                             <div><?=Yii::t("app/main", "slide-item2-text1") ?></div>
@@ -53,7 +53,7 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/static/main.js'));
                     <div class="slide-item">
                         <div class="slide-item__part">
                             <div class="slide-item__ico slide-item__ico_contracting-entities"></div>
-                            <div class="slide-item__number">817</div>
+                            <div class="slide-item__number"><?=Yii::t("app/main", "slide-item3-number") ?></div>
                         </div>
                         <div class="slide-item__text">
                             <div><?=Yii::t("app/main", "slide-item3-text1") ?></div>
@@ -63,7 +63,7 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/static/main.js'));
                     <div class="slide-item">
                         <div class="slide-item__part">
                             <div class="slide-item__ico slide-item__ico_economic-operators"></div>
-                            <div class="slide-item__number">1’860</div>
+                            <div class="slide-item__number"><?=Yii::t("app/main", "slide-item4-number") ?></div>
                         </div>
                         <div class="slide-item__text">
                             <div><?=Yii::t("app/main", "slide-item4-text1") ?></div>
@@ -75,7 +75,7 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/static/main.js'));
                     <div class="slide-item">
                         <div class="slide-item__part">
                             <div class="slide-item__ico slide-item__ico_total-savings"></div>
-                            <div class="slide-item__number">12’150’000</div>
+                            <div class="slide-item__number"><?=Yii::t("app/main", "slide-item5-number") ?></div>
                         </div>
                         <div class="slide-item__text">
                             <div><?=Yii::t("app/main", "slide-item5-text1") ?></div>
