@@ -63,6 +63,7 @@ use frontend\helpers\File;
 
         <?= $this->render("/layouts/footer") ?>
         <script src=/js/chunk-vendors.js> </script>
+        <script src="/js/static/index.js"></script>
         <script src=/js/app.js></script>
         <?php $this->endBody() ?>
     </body>
