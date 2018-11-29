@@ -38,6 +38,8 @@ use frontend\helpers\File;
         <link href=/js/ContractPage.js rel=prefetch>
         <link href=/js/TenderPage.js rel=prefetch>
 
+        <link href=/css/TenderPage.css rel=prefetch>
+
         <link href=/css/chunk-vendors.css rel=preload as=style>
         <link href=/css/app.css rel=preload as=style>
 
@@ -61,8 +63,8 @@ use frontend\helpers\File;
 
         <?= $this->render("/layouts/footer") ?>
         <script src=/js/chunk-vendors.js> </script>
-        <script src=/js/app.js></script>
         <script src="/js/static/index.js"></script>
+        <script src=/js/app.js></script>
         <?php $this->endBody() ?>
     </body>
 </html>
