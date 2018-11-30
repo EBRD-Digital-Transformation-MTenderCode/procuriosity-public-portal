@@ -87,22 +87,24 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/static/main.js'));
             <a href="<?=Url::to(['/pages/view', 'slug'=>'join-mtender'])?>" class="main__join-button"><?=Yii::t("app/main", "join") ?></a>
         </section>
     </div>
-    <section class="el-container is-vertical">
-        <div class="main-news">
-            <div class="main-news__title">
-                <?=Yii::t("app/main", "news-title") ?>
-            </div>
-            <div class="main-news__cards-wp">
-                <?php foreach (News::getLastItems() as $item):?>
-                <div class="main-news__card"><img src="/uploads/news/ico/<?=$item->image?>" alt="<?=Html::encode($item->title)?>" class="main-news__img">
-                    <div class="main-news__text">
-                        <?=StringHelper::truncate(strip_tags($item->body), 360)?>
-                    </div>
+    <div class="main-news-wp">
+        <section class="el-container is-vertical">
+            <div class="main-news">
+                <div class="main-news__title">
+                    <?=Yii::t("app/main", "news-title") ?>
                 </div>
-                <?php endforeach;?>
+                <div class="main-news__cards-wp">
+                    <?php foreach (News::getLastItems() as $item):?>
+                    <div class="main-news__card"><img src="/uploads/news/ico/<?=$item->image?>" alt="<?=Html::encode($item->title)?>" class="main-news__img">
+                        <div class="main-news__text">
+                            <?=StringHelper::truncate(strip_tags($item->body), 360)?>
+                        </div>
+                    </div>
+                    <?php endforeach;?>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <div class="main-about">
         <section class="el-container is-vertical">
             <div class="main-about__title">
