@@ -35,9 +35,11 @@ use frontend\helpers\File;
 
         <title>MTender Public Portal - <?= Html::encode($this->title) ?></title>
 
-        <link href=/js/ContractPage.js rel=prefetch>
+        <link href="/js/PlanPage.js" rel="prefetch">
         <link href=/js/TenderPage.js rel=prefetch>
+        <link href=/js/ContractPage.js rel=prefetch>
 
+        <link href="/css/PlanPage.css" rel="prefetch">
         <link href=/css/TenderPage.css rel=prefetch>
 
         <link href=/css/chunk-vendors.css rel=preload as=style>
