@@ -12,6 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const carouselIndicators = document.querySelectorAll(".carousel-indicator");
 
+    if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = function (callback, thisArg) {
+            thisArg = thisArg || window;
+            for (var i = 0; i < this.length; i++) {
+                callback.call(thisArg, this[i], i, this);
+            }
+        };
+    }
+
     mainCarousel.events.on("indexChanged", event => {
         carouselIndicators.forEach((indicator, index) => {
             event.index === index ? indicator.classList.add("is-active") : indicator.classList.remove("is-active");
