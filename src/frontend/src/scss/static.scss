@@ -133,6 +133,7 @@
       }
     }
     &-partners {
+      width: 100%;
       padding-bottom: 50px;
       @media (max-width: 767px) {
         padding-bottom: 30px;
@@ -154,7 +155,7 @@
             flex-wrap: wrap;
           }
           a {
-            max-width: 20%;
+            width: 20%;
             @media (max-width: 768px) {
               min-width: 200px;
               max-width: 50%;
@@ -230,7 +231,7 @@
           }
           &_right {
             padding-left: 45px;
-            transform: translateX(calc(100% - 1px));
+            transform: translateX(99.8%);
             text-align: left;
             border-left: 1px solid #2383c5;
             @media (max-width: 640px) {
@@ -341,6 +342,7 @@
     }
   }
   &-for-civil {
+    width: 100%;
     padding-top: 50px;
     text-align: justify;
   }
@@ -433,12 +435,9 @@
      justify-content: space-around;
     }
     &-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       width: calc(100% / 6);
-      margin: 20px;
+      margin: 20px auto 0;
+      text-align: center;
       @media (max-width: 767px) {
         width: calc(100% / 3);
       }
@@ -453,6 +452,8 @@
       &__name {
         text-align: center;
         font-size: 14px;
+        p{
+        }
       }
     }
   }
