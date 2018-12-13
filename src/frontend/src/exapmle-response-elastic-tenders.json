@@ -1,0 +1,63 @@
+{
+  "cdb": "'mtender1' | 'mtender2'",
+  "id": "data.id | MS.ocid",
+  "entityId": "data.tenderID | MS.ocid",
+  "title": "data.title | MS.compiledRelease.tender.title",
+  "description": "data.description | MS.compiledRelease.tender.description",
+  "buyerName": "data.procuringEntity.name | MS.compiledRelease.parties[roles has buyer].name",
+  "buyerRegion": "data.procuringEntity.address.region | MS.compiledRelease.parties[roles has buyer].address.addressDetails.region.description",
+  "procedureType": "'reporting' | 'mv' | 'sv' | 'ot'",
+  "procedureStatus": "'published' | 'clarification' | 'tendering' | 'auction' | 'awarding' | 'suspended' | 'awarded' | 'complete' | 'cancelled' | 'unsuccessful'",
+  "amount": "data.value.amount | MS.compiledRelease.tender.value.amount",
+  "currency": "data.value.currency | MS.compiledRelease.tender.value.currency",
+  "modifiedDate": "data.dateModified | EV.compiledRelease.date",  
+  "__debug__titlesOrDescriptions": [
+    "data.id | MS.ocid",
+    "data.title | MS.compiledRelease.tender.title",
+    "data.description | MS.compiledRelease.tender.description",
+    "data.lots[*].title | EV.compiledRelease.tender.lots[*].title",
+    "data.lots[*].description | EV.compiledRelease.tender.lots[*].description",
+    "data.items[*].description | EV.compiledRelease.tender.items[*].description"
+
+  ],
+  "__debug__titlesOrDescriptionsStrict": [
+    "data.id | MS.ocid",
+    "data.title | MS.compiledRelease.tender.title",
+    "data.description | MS.compiledRelease.tender.description",
+    "data.lots[*].title | EV.compiledRelease.tender.lots[*].title",
+    "data.lots[*].description | EV.compiledRelease.tender.lots[*].description",
+    "data.items[*].description | EV.compiledRelease.tender.items[*].description"
+  ],
+  "__debug__deliveriesRegions": [
+    "data.items[*].deliveryAddress.region | EV.compiledRelease.tender.items[*].placeOfPerformance.address.addressDetails.region.description"
+  ],
+  "__debug__classifications": [
+    "null | MS.compiledRelease.tender.classification.id",
+    "data.items[*].classification.id | EV.compiledRelease.tender.items[*].classification.id"
+  ],
+  "__debug__publishedDate": "if procurementMethodType == 'reporting' -> data.date else data.enquiryPeriod.startDate | EV.compiledRelease.tender.enquiryPeriod.startDate",
+  "__debug__periodDeliveryFrom": [
+    "data.items[*].deliveryDate.startDate | EV.compiledRelease.tender.lots[*].contractPeriod.startDate"
+  ],
+  "__debug__periodDeliveryTo": [
+    "data.items[*].deliveryDate.endDate | EV.compiledRelease.tender.lots[*].contractPeriod.endDate"
+  ],
+  "__debug__periodEnquiryFrom": "data.enquiryPeriod.startDate? | EV.compiledRelease.tender.enquiryPeriod.startDate",
+  "__debug__periodEnquiryTo": "data.enquiryPeriod.endDate? | EV.compiledRelease.tender.enquiryPeriod.endDate",
+  "__debug__periodOfferFrom": "data.tenderPeriod.startDate? | EV.compiledRelease.tender.tenderPeriod.startDate",
+  "__debug__periodOfferTo": "data.tenderPeriod.endDate? | EV.compiledRelease.tender.tenderPeriod.endDate",
+  "__debug__periodAwardFrom": "data.awardPeriod.startDate? | EV.compiledRelease.tender.awardPeriod.startDate?",
+  "__debug__periodAwardTo": "data.awardPeriod.endDate? | EV.compiledRelease.tender.awardPeriod.endDate?",
+  "__debug__periodAuctionFrom": "data.auctionPeriod.startDate? | EV.compiledRelease.tender.auctionPeriod.startDate?",
+  "__debug__periodAuctionTo": "data.auctionPeriod.endDate? | EV.compiledRelease.tender.auctionPeriod.endDate?",
+  "__debug__buyersNames": [
+    "data.procuringEntity.name | MS.compiledRelease.parties[roles has buyer].name",
+    "data.procuringEntity.identifier.legalName | MS.compiledRelease.parties[roles has buyer].identifier.legalName"
+  ],
+  "__debug__buyerIdentifier": "data.procuringEntity.identifier.id | MS.compiledRelease.parties[roles has buyer].identifier.id",
+  "__debug__buyerType": "null | MS.compiledRelease.parties[roles has buyer].details.typeOfBuyer",
+  "__debug__buyerMainGeneralActivity": "null | MS.compiledRelease.parties[roles has buyer].details.mainGeneralActivity",
+  "__debug__buyerMainSectoralActivity": "null | MS.compiledRelease.parties[roles has buyer].details.mainSectoralActivity",
+  "__debug___score": 0,
+  "__debug__debug": "true | false"
+}
