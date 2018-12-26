@@ -1,0 +1,35 @@
+.js-Accordion {
+  margin-top: 30px;
+
+  &-title {
+    display: block;
+    width: 100%;
+    padding: 12px 18px;
+    background-color: #f3f3f3;
+    font-weight: 700;
+    font-size: 18px;
+    color: #235aa6;
+    cursor: pointer;
+  }
+
+  &-content {
+    height: 0;
+    margin-bottom: 25px;
+    padding: 0 18px;
+    background-color: #f3f3f3;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  a {
+    color: #235aa6;
+  }
+
+  ol {
+    margin: 15px 0;
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+}
+

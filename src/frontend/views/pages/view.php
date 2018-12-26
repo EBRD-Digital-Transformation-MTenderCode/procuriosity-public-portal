@@ -1,4 +1,5 @@
 <?php
+
 use yii\helpers\Html;
 use frontend\helpers\File;
 use frontend\models\News;
@@ -9,6 +10,12 @@ $this->registerMetaTag(['name' => 'description', 'content' => $model->metaDescri
 
 $this->registerCssFile(File::getNameWithCreatedTime('/css/static/static.css'));
 $this->registerJsFile(File::getNameWithCreatedTime('/js/static/static.js'));
+
+if ($model->slug == 'faq') {
+    $this->registerCssFile(File::getNameWithCreatedTime('/css/static/accordion.css'));
+    $this->registerJsFile(File::getNameWithCreatedTime('/js/static/accordion.js'));
+}
+
 ?>
 <div class="static">
     <div class="static-banner">
@@ -22,24 +29,22 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/static/static.js'));
         </section>
     </div>
     <?= $model->content ?>
-    <?php if($model->slug == 'legal-framework'):?>
+    <?php if ($model->slug == 'legal-framework'): ?>
         <section class="el-container is-vertical">
             <div class="main-news">
                 <div class="main-news__title">
-                    <?=Yii::t("app/main", "news-title") ?>
+                    <?= Yii::t("app/main", "news-title") ?>
                 </div>
                 <div class="main-news__cards-wp">
                     <?php foreach (News::getLastItems() as $item):?>
                         <div class="main-news__card"><img src="/uploads/news/ico/<?=$item->image?>" alt="<?=Html::encode($item->title)?>" class="main-news__img">
                             <div class="main-news__text">
-                                <?=StringHelper::truncate(strip_tags($item->body), 360)?>
+                                <?= StringHelper::truncate(strip_tags($item->body), 360) ?>
                             </div>
                         </div>
-                    <?php endforeach;?>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>
-    <?php endif;?>
+    <?php endif; ?>
 </div>
-
-
