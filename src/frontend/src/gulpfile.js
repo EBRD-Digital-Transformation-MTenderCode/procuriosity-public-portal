@@ -32,7 +32,12 @@ const cleanBuildsTask = () => {
 };
 
 const scssTask = () => {
-    return src([`${paths.scss}/index.scss`, `${paths.scss}/main.scss`, `${paths.scss}/static.scss`])
+    return src([
+        `${paths.scss}/index.scss`,
+        `${paths.scss}/main.scss`,
+        `${paths.scss}/static.scss`,
+        `${paths.scss}/accordion.scss`
+    ])
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(scss().on("error", scss.logError))
         .pipe(postcss([
