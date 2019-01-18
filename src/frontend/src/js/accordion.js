@@ -148,9 +148,10 @@ var Accordion = function(options) {
     };
 };
 
-
-var accordion = new Accordion({
-    element: "accordion",    // ID of the accordion container
-    openTab: 1,              // [optional] Accordion tab to start opened with. All tabs closed if not set.
-    oneOpen: true            // [optional] Allow one accordion tab only to be opened at a time
-});
+if(document.getElementById("accordion")) {
+    var accordion = new Accordion({
+        element: "accordion",    // ID of the accordion container
+        openTab: 1,              // [optional] Accordion tab to start opened with. All tabs closed if not set.
+        oneOpen: true            // [optional] Allow one accordion tab only to be opened at a time
+    });
+};
