@@ -14,13 +14,13 @@
  * @param {number} [options.openTab=1] - Start the accordion with this item opened.
  * @param {boolean} [options.oneOpen=false] - Only one tab can be opened at a time.
  */
-var Accordion = function(options) {
+var Accordion = function (options) {
     var element = typeof options.element === 'string' ?
         document.getElementById(options.element) : options.element,
         openTab = options.openTab,
         oneOpen = options.oneOpen || false,
 
-        titleClass   = 'js-Accordion-title',
+        titleClass = 'js-Accordion-title',
         contentClass = 'js-Accordion-content';
 
     render();
@@ -31,7 +31,7 @@ var Accordion = function(options) {
     function render() {
         // attach classes to buttons and containers
         [].forEach.call(element.querySelectorAll('button'),
-            function(item) {
+            function (item) {
                 item.classList.add(titleClass);
                 item.nextElementSibling.classList.add(contentClass);
             });
@@ -69,8 +69,9 @@ var Accordion = function(options) {
      * Closes all accordion tabs.
      */
     function closeAll() {
-        [].forEach.call(element.querySelectorAll('.' + contentClass), function(item) {
+        [].forEach.call(element.querySelectorAll('.' + contentClass), function (item) {
             item.style.height = 0;
+            item.style.opacity = 0;
         });
     }
 
@@ -85,9 +86,11 @@ var Accordion = function(options) {
         var height = el.scrollHeight;
 
         if (el.style.height === '0px' || el.style.height === '') {
-            el.style.height = height + 20 + 'px';
+            el.style.height = height + 'px';
+            el.style.opacity = 1;
         } else {
             el.style.height = 0;
+            el.style.opacity = 0;
         }
     }
 
@@ -110,10 +113,10 @@ var Accordion = function(options) {
      */
     function open(n) {
         var target = getTarget(n);
-
         if (target) {
             if (oneOpen) closeAll();
-            target.style.height = target.scrollHeight + 20 + 'px';
+            target.style.height = target.scrollHeight + 25 + 'px';
+            target.style.opacity = 1;
         }
     }
 
@@ -129,6 +132,7 @@ var Accordion = function(options) {
 
         if (target) {
             target.style.height = 0;
+            target.style.opacity = 0;
         }
     }
 
@@ -148,10 +152,11 @@ var Accordion = function(options) {
     };
 };
 
-if(document.getElementById("accordion")) {
+if (document.getElementById("accordion")) {
     var accordion = new Accordion({
         element: "accordion",    // ID of the accordion container
         openTab: 1,              // [optional] Accordion tab to start opened with. All tabs closed if not set.
         oneOpen: true            // [optional] Allow one accordion tab only to be opened at a time
     });
-};
+}
+;
