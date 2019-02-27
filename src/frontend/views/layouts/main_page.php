@@ -38,9 +38,7 @@ use frontend\helpers\File;
         <link href="/js/PlanPage.js" rel="prefetch">
         <link href=/js/TenderPage.js rel=prefetch>
         <link href=/js/ContractPage.js rel=prefetch>
-
-        <link href="/css/PlanPage.css" rel="prefetch">
-        <link href=/css/TenderPage.css rel=prefetch>
+        <link href="/js/BudgetPage.js" rel="prefetch">
 
         <link href=/css/chunk-vendors.css rel=preload as=style>
         <link href=/css/app.css rel=preload as=style>
