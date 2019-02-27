@@ -26,6 +26,9 @@ class UrlRule extends BaseObject implements UrlRuleInterface
             $outParams = [
                 'url' => $url . "?" . $getParams
             ];
+        } elseif (strpos($pathInfo, 'budgets') !== false) {
+            $route = 'site/public';
+            $outParams['type'] = 'budgets';
         } elseif (strpos($pathInfo, 'plans') !== false) {
             $route = 'site/public';
             $outParams['type'] = 'plans';
