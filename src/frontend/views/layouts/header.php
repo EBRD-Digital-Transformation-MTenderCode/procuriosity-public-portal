@@ -18,8 +18,7 @@ use yii\helpers\Url;
                                 class="header-logo-ebrd__img"
                         >
                         <div class="header-logo-ebrd__text">
-                            <div>Pilot Project Funded by the European Bank</div>
-                            <div>for Reconstruction and Development</div>
+                            Pilot Project Funded by the European Bank for Reconstruction and Development
                         </div>
                     </div>
                     <div class="locale-toggle el-dropdown">
