@@ -38,9 +38,8 @@ use frontend\helpers\File;
         <link href="/js/PlanPage.js" rel="prefetch">
         <link href=/js/TenderPage.js rel=prefetch>
         <link href=/js/ContractPage.js rel=prefetch>
+        <link href="/js/BudgetPage.js" rel="prefetch">
 
-        <link href="/css/PlanPage.css" rel="prefetch">
-        <link href=/css/TenderPage.css rel=prefetch>
 
         <link href=/css/chunk-vendors.css rel=preload as=style>
         <link href=/css/app.css rel=preload as=style>
@@ -59,7 +58,7 @@ use frontend\helpers\File;
         <?= $this->render("/layouts/header") ?>
 
         <noscript>
-            <strong>We're sorry but MTender Public Portal doesn't work properly without JavaScript enabled. Please  it to continue.</strong>
+            <strong>We're sorry but MTender Public Portal doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
         </noscript>
         <div id="app"></div>
 
