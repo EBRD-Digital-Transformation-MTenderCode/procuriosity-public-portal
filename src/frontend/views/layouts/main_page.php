@@ -35,21 +35,20 @@ use frontend\helpers\File;
 
         <title>MTender Public Portal - <?= Html::encode($this->title) ?></title>
 
-        <link href="/js/PlanPage.js" rel="prefetch">
-        <link href=/js/TenderPage.js rel=prefetch>
-        <link href=/js/ContractPage.js rel=prefetch>
         <link href="/js/BudgetPage.js" rel="prefetch">
+        <link href="/js/PlanPage.js" rel="prefetch">
+        <link href="/js/TenderPage.js" rel="prefetch">
+        <link href="/js/ContractPage.js" rel="prefetch">
 
+        <link href="/css/chunk-vendors.css" rel="preload" as="style">
+        <link href="/css/app.css" rel="preload" as="style">
 
-        <link href=/css/chunk-vendors.css rel=preload as=style>
-        <link href=/css/app.css rel=preload as=style>
+        <link href="/js/app.js" rel="preload" as="script">
+        <link href="/js/chunk-vendors.js" rel="preload" as="script">
 
-        <link href=/js/app.js rel=preload as=script>
-        <link href=/js/chunk-vendors.js rel=preload as=script>
-
-        <link href=/css/chunk-vendors.css rel=stylesheet>
-        <link href=/css/static/index.css rel="stylesheet">
-        <link href=/css/app.css rel=stylesheet>
+        <link href="/css/chunk-vendors.css" rel="stylesheet">
+        <link href="/css/static/index.css" rel="stylesheet">
+        <link href="/css/app.css" rel="stylesheet">
 
         <?php $this->head() ?>
     </head>
@@ -63,9 +62,9 @@ use frontend\helpers\File;
         <div id="app"></div>
 
         <?= $this->render("/layouts/footer") ?>
-        <script src=/js/chunk-vendors.js> </script>
         <script src="/js/static/index.js"></script>
-        <script src=/js/app.js></script>
+        <script src="/js/chunk-vendors.js"></script>
+        <script src="/js/app.js"></script>
         <?php $this->endBody() ?>
     </body>
 </html>
