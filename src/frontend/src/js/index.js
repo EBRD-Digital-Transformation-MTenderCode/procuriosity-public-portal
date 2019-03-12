@@ -72,4 +72,22 @@ document.addEventListener("DOMContentLoaded", () => {
             dropdown.classList.remove("header-dropdown-close");
         }
     });
+
+    const tabs = document.querySelectorAll(".header-entity-nav_tab-WP");
+
+    Array.from(tabs).forEach(tab =>{
+        const tabContent = tab.querySelector(".header-entity-nav_tab-content");
+        tab.addEventListener("mouseover", ()=>{
+            if(!tabContent.classList.contains("show-submenu") || !tab.classList.contains("hovered-tab")) {
+                tabContent.classList.add("show-submenu");
+                tab.classList.add("hovered-tab")
+            }
+        })
+        tab.addEventListener("mouseout", ()=>{
+            if(tabContent.classList.contains("show-submenu") || tab.classList.contains("hovered-tab")){
+                tabContent.classList.remove("show-submenu");
+                tab.classList.remove("hovered-tab")
+            }
+        })
+    })
 });

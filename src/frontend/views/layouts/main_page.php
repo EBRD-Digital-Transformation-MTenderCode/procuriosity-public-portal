@@ -35,22 +35,20 @@ use frontend\helpers\File;
 
         <title>MTender Public Portal - <?= Html::encode($this->title) ?></title>
 
+        <link href="/js/BudgetPage.js" rel="prefetch">
         <link href="/js/PlanPage.js" rel="prefetch">
-        <link href=/js/TenderPage.js rel=prefetch>
-        <link href=/js/ContractPage.js rel=prefetch>
+        <link href="/js/TenderPage.js" rel="prefetch">
+        <link href="/js/ContractPage.js" rel="prefetch">
 
-        <link href="/css/PlanPage.css" rel="prefetch">
-        <link href=/css/TenderPage.css rel=prefetch>
+        <link href="/css/chunk-vendors.css" rel="preload" as="style">
+        <link href="/css/app.css" rel="preload" as="style">
 
-        <link href=/css/chunk-vendors.css rel=preload as=style>
-        <link href=/css/app.css rel=preload as=style>
+        <link href="/js/app.js" rel="preload" as="script">
+        <link href="/js/chunk-vendors.js" rel="preload" as="script">
 
-        <link href=/js/app.js rel=preload as=script>
-        <link href=/js/chunk-vendors.js rel=preload as=script>
-
-        <link href=/css/chunk-vendors.css rel=stylesheet>
-        <link href=/css/static/index.css rel="stylesheet">
-        <link href=/css/app.css rel=stylesheet>
+        <link href="/css/chunk-vendors.css" rel="stylesheet">
+        <link href="/css/static/index.css" rel="stylesheet">
+        <link href="/css/app.css" rel="stylesheet">
 
         <?php $this->head() ?>
     </head>
@@ -59,14 +57,14 @@ use frontend\helpers\File;
         <?= $this->render("/layouts/header") ?>
 
         <noscript>
-            <strong>We're sorry but MTender Public Portal doesn't work properly without JavaScript enabled. Please  it to continue.</strong>
+            <strong>We're sorry but MTender Public Portal doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
         </noscript>
         <div id="app"></div>
 
         <?= $this->render("/layouts/footer") ?>
-        <script src=/js/chunk-vendors.js> </script>
         <script src="/js/static/index.js"></script>
-        <script src=/js/app.js></script>
+        <script src="/js/chunk-vendors.js"></script>
+        <script src="/js/app.js"></script>
         <?php $this->endBody() ?>
     </body>
 </html>
