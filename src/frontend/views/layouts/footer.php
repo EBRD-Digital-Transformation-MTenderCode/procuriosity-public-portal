@@ -16,7 +16,7 @@ use yii\helpers\Url;
                     </a>
                     <div class="footer-logo__cr">
 
-                        2018 ©, <?=Yii::t("app/footer", "copyright") ?>
+                        <?= date("Y") ?> ©, <?=Yii::t("app/footer", "copyright") ?>
                     </div>
                 </div>
                 <nav class="footer-nav">

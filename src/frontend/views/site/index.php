@@ -154,6 +154,12 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/static/main.js'));
                     <a href="https://achizitii.md/" target="_blank">
                         <img src="/img/achizitii.md.png" alt="achizitii">
                     </a>
+                    <a href="javascript:void(0);" class="link_disabled" target="_blank">
+                        <img src="/img/lonar.png" alt="lonar">
+                    </a>
+                    <a href="javascript:void(0);" class="link_disabled" target="_blank">
+                        <img src="/img/ebs-integrator.png" alt="ebs-integrator">
+                    </a>
                 </div>
             </div>
         </section>
