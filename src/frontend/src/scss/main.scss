@@ -348,6 +348,11 @@
             margin: 20px;
           }
         }
+        .link_disabled {
+          filter: grayscale(100%);
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
       }
     }
   }
