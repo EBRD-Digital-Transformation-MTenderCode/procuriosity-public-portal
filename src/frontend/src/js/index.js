@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const pathWithoutLang = window.location.pathname.replace(/\/ru|\/en/, "");
 
-        langsLinks.forEach(item => {
+        [...langsLinks].forEach(item => {
             const lang = item.getAttribute("data-lang");
             item.setAttribute("href", lang === "ro" ? pathWithoutLang ? pathWithoutLang : "/" : `/${lang}${pathWithoutLang}`);
 
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const tabs = document.querySelectorAll(".header-entity-nav_tab-WP");
 
-    if (!Array.from) {
+    /*if (!Array.from) {
         Array.from = (function() {
             const toStr = Object.prototype.toString;
             const isCallable = function(fn) {
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const len = toInteger(value);
                 return Math.min(Math.max(len, 0), maxSafeInteger);
             };
-            return function from(arrayLike/*, mapFn, thisArg */) {
+            return function from(arrayLike/!*, mapFn, thisArg *!/) {
                 const C = this;
                 const items = Object(arrayLike);
                 if (arrayLike == null) {
@@ -125,8 +125,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 return A;
             };
         }());
-    }
-    Array.from(tabs).forEach(tab =>{
+    }*/
+    [...tabs].forEach(tab =>{
         const tabContent = tab.querySelector(".header-entity-nav_tab-content");
         tab.addEventListener("mouseover", ()=>{
             if(!tabContent.classList.contains("show-submenu") || !tab.classList.contains("hovered-tab")) {
