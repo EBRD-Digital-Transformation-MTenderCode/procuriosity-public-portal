@@ -80,38 +80,44 @@ use yii\helpers\Url;
                     <div class="header-entity-nav_tab-content"
                     >
                         <a href="<?= Url::to(['/site/public', 'type' => 'budgets']) ?>">
-                            <?= Yii::t("app/header", "nav-plans-budget") ?>
+                            <?= Yii::t("app/header", "nav-plans-budgets") ?>
                         </a>
                         <a href="<?= Url::to(['/site/public', 'type' => 'plans']) ?>">
-                            <?= Yii::t("app/header", "nav-plans-plan") ?>
+                            <?= Yii::t("app/header", "nav-plans-procurement") ?>
+                        </a>
+                        <a href="<?= Url::to(['/site/public', 'type' => 'plans?procedures=pin']) ?>">
+                            <?= Yii::t("app/header", "nav-plans-pin") ?>
                         </a>
                     </div>
                 </div>
 
                 <div
-                    <?= (Yii::$app->request->get('type') == 'tenders') && ((Yii::$app->request->get('procedures') == 'new') || (Yii::$app->request->get('procedures') == 'bidding')) ? 'class="header-entity-nav_tab-WP is-active"' : 'class=header-entity-nav_tab-WP' ?>>
-                    <div> <?= Yii::t("app/header", "nav-bulletins") ?></div>
-                    <div class="header-entity-nav_tab-content"
-                    >
-                        <a href="<?= Url::to(['/site/public', 'type' => 'tenders?procedures=new']) ?>">
-                            <?= Yii::t("app/header", "nav-bulletins-tenders") ?>
-                        </a>
-                        <a href="<?= Url::to(['/site/public', 'type' => 'tenders?procedures=bidding']) ?>">
-                            <?= Yii::t("app/header", "nav-bulletins-bids") ?>
-                        </a>
-                    </div>
-                </div>
-
-                <div
-                    <?= ((Yii::$app->request->get('type') == 'tenders' && (!Yii::$app->request->get('procedures'))) || Yii::$app->request->get('type') == 'contracts') ? 'class="header-entity-nav_tab-WP is-active"' : 'class=header-entity-nav_tab-WP' ?>>
-                    <div> <?= Yii::t("app/header", "nav-contract") ?></div>
+                    <?= Yii::$app->request->get('type') == 'tenders' ? 'class="header-entity-nav_tab-WP is-active"' : 'class=header-entity-nav_tab-WP' ?>>
+                    <div> <?= Yii::t("app/header", "nav-tenders") ?></div>
                     <div class="header-entity-nav_tab-content"
                     >
                         <a href="<?= Url::to(['/site/public', 'type' => 'tenders']) ?>">
-                            <?= Yii::t("app/header", "nav-contracts-tenders") ?>
+                            <?= Yii::t("app/header", "nav-public-tenders") ?>
+                        </a>
+                        <a href="<?= Url::to(['/site/public', 'type' => 'tenders?procedures=commercial']) ?>">
+                            <?= Yii::t("app/header", "nav-commercial-tenders") ?>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    <?= Yii::$app->request->get('type') == 'contracts' ? 'class="header-entity-nav_tab-WP is-active"' : 'class=header-entity-nav_tab-WP' ?>>
+                    <div> <?= Yii::t("app/header", "nav-contract") ?></div>
+                    <div class="header-entity-nav_tab-content"
+                    >
+                        <a href="<?= Url::to(['/site/public', 'type' => 'contracts?procedures=signing']) ?>">
+                            <?= Yii::t("app/header", "nav-contract-online-signing") ?>
+                        </a>
+                        <a class="is-disabled">
+                            <?= Yii::t("app/header", "nav-contract-registered") ?>
                         </a>
                         <a href="<?= Url::to(['/site/public', 'type' => 'contracts']) ?>">
-                            <?= Yii::t("app/header", "nav-contracts-signed") ?>
+                            <?= Yii::t("app/header", "nav-contract-under-implementation") ?>
                         </a>
                     </div>
                 </div>

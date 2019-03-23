@@ -27,8 +27,8 @@ const paths = {
 };
 
 const cleanBuildsTask = () => {
-    return src([`${paths.build}/js/static`, `${paths.build}/css/static`, `${paths.build}/img/`])
-        .pipe(clean({force: true}))
+    return src([`${paths.build}/js/static/**/*`, `${paths.build}/css/static/**/*`, `${paths.build}/img/**/*`], {read: false})
+        .pipe(clean({force: true, allowEmpty: false}))
 };
 
 const scssTask = () => {
@@ -55,9 +55,7 @@ const scssTask = () => {
 const jsTask = () => {
     return src(`${paths.js}/**/*.js`)
         .pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
+        .pipe(babel())
         .pipe(uglify())
         .pipe(sourcemaps.write("."))
         .pipe(dest(`${paths.build}/js/static`));
