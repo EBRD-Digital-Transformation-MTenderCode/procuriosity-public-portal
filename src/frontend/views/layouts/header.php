@@ -113,9 +113,9 @@ use yii\helpers\Url;
                         <a href="<?= Url::to(['/site/public', 'type' => 'contracts?procedures=signing']) ?>">
                             <?= Yii::t("app/header", "nav-contract-online-signing") ?>
                         </a>
-<!--                        <a href="<?/*= Url::to(['/site/public', 'type' => 'contracts']) */?>">
-                            <?/*= Yii::t("app/header", "nav-contract-registered") */?>
-                        </a>-->
+                        <a class="is-disabled">
+                            <?= Yii::t("app/header", "nav-contract-registered") ?>
+                        </a>
                         <a href="<?= Url::to(['/site/public', 'type' => 'contracts']) ?>">
                             <?= Yii::t("app/header", "nav-contract-under-implementation") ?>
                         </a>

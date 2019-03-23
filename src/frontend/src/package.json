@@ -32,5 +32,4 @@
     "@babel/polyfill": "^7.4.0",
     "element-ui": "^2.4.9"
   }
-
 }
