@@ -163,7 +163,7 @@
           .link_disabled {
             filter: grayscale(100%);
             opacity: 0.3;
-            cursor: not-allowed;
+            pointer-events: none;
           }
         }
       }
