@@ -34,7 +34,7 @@ class SearchController extends Controller
      */
     public function actionBudgets()
     {
-        $requestUrl = Yii::$app->params['elastic_service_url'] . '/rest-api/v1/budgets/search';
+        $requestUrl = Yii::$app->params['elastic_service_url'] . '/search/budgets';
         $queryString = Yii::$app->request->getQueryString();
         $queryString = $queryString ? "?" . $queryString : "";
 
@@ -54,7 +54,7 @@ class SearchController extends Controller
     public function actionTenders()
     {
         Yii::$app->response->format = Response::FORMAT_JSON;
-        $requestUrl = Yii::$app->params['elastic_service_url'] . '/rest-api/v1/tenders/search';
+        $requestUrl = Yii::$app->params['elastic_service_url'] . '/search/tenders';
         $queryString = Yii::$app->request->getQueryString();
         $queryString = $queryString ? "?" . $queryString : "";
 
@@ -72,7 +72,7 @@ class SearchController extends Controller
     public function actionContracts()
     {
         Yii::$app->response->format = Response::FORMAT_JSON;
-        $requestUrl = Yii::$app->params['elastic_service_url'] . '/rest-api/v1/contracts/search';
+        $requestUrl = Yii::$app->params['elastic_service_url'] . '/search/contracts';
         $queryString = Yii::$app->request->getQueryString();
         $queryString = $queryString ? "?" . $queryString : "";
 
@@ -90,7 +90,7 @@ class SearchController extends Controller
     public function actionPlans()
     {
         Yii::$app->response->format = Response::FORMAT_JSON;
-        $requestUrl = Yii::$app->params['elastic_service_url'] . '/rest-api/v1/plans/search';
+        $requestUrl = Yii::$app->params['elastic_service_url'] . '/search/plans';
         $queryString = Yii::$app->request->getQueryString();
         $queryString = $queryString ? "?" . $queryString : "";
 
@@ -108,7 +108,7 @@ class SearchController extends Controller
     public function actionCpv()
     {
         Yii::$app->response->format = Response::FORMAT_JSON;
-        $requestUrl = Yii::$app->params['elastic_service_url'] . '/rest-api/v1/cpv/search';
+        $requestUrl = Yii::$app->params['elastic_service_url'] . '/search/cpv';
         $queryString = Yii::$app->request->getQueryString();
         $queryString = $queryString ? "?" . $queryString : "";
 
