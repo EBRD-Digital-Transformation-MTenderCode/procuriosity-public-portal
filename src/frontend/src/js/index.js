@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const html = document.querySelector("html");
     let langFromUrl;
 
-    if ((/\/en|\/ru/).test(window.location)) {
-        langFromUrl = window.location.pathname.match(/\/en|\/ru/)[0].replace(/\//g, "");
+    if ((/^(\/en|\/ru)/).test(window.location.pathname)) {
+        langFromUrl = window.location.pathname.match(/(^\/en|\/ru)/)[0].replace(/\//g, "");
         html.setAttribute("lang", langFromUrl ? langFromUrl : "ro");
     }
 
@@ -31,11 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
             localeMenu.classList.add("show");
         }
 
-        const pathWithoutLang = window.location.pathname.replace(/\/ru|\/en/, "");
+        const pathWithoutLang = window.location.pathname.replace(/^(\/ru|\/en)/, "");
+        const search = window.location.search;
 
         [...langsLinks].forEach(item => {
             const lang = item.getAttribute("data-lang");
-            item.setAttribute("href", lang === "ro" ? pathWithoutLang ? pathWithoutLang : "/" : `/${lang}${pathWithoutLang}`);
+            item.setAttribute("href", lang === "ro" ? pathWithoutLang ? `${pathWithoutLang}${search}` : "/" : `/${lang}${pathWithoutLang}${search}`);
 
             if (langFromUrl) {
                 if (langFromUrl === lang) {
