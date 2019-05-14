@@ -29,7 +29,7 @@ class Complaints extends Model
         $params = ['q' => '*:*', 'wt' => 'json', 'rows' => 30, 'sort' => 'timestamp asc'];
 
         if ($offset) {
-            $params['fq'] = "timestamp:[{$offset}%20TO%20NOW]";
+            $params['fq'] = "timestamp:[{$offset} TO NOW]";
         }
 
         $client = new Client(['transport' => 'yii\httpclient\CurlTransport']);
