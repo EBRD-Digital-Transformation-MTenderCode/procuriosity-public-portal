@@ -35,7 +35,10 @@ class ComplaintsController extends Controller
      * Complaints api action
      * @param string $type
      * @param null $offset
+     * @return string
      * @throws HttpException
+     * @throws \yii\base\InvalidConfigException
+     * @throws \yii\httpclient\Exception
      */
     public function actionIndex($type = Complaints::TYPE_CONTESTATII, $offset = null)
     {
@@ -47,6 +50,6 @@ class ComplaintsController extends Controller
             throw new HttpException(400, 'Wrong offset format');
         }
 
-        echo Complaints::request($type, $offset);
+        return Complaints::request($type, $offset);
     }
 }
