@@ -46,7 +46,9 @@ class ComplaintsController extends Controller
             throw new HttpException(400, 'Unknown type "' . $type . '"');
         }
 
-        if ($offset && !(new DateValidator(['format' => 'php:Y-m-d\TH:i:s.uP']))->validate($offset)) {
+        if ($offset
+            && !(new DateValidator(['format' => 'php:Y-m-d\TH:i:s.uP']))->validate($offset)
+            && !(new DateValidator(['format' => 'php:Y-m-d\TH:i:sP']))->validate($offset)) {
             throw new HttpException(400, 'Wrong offset format');
         }
 
