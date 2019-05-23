@@ -119,4 +119,39 @@ class SearchController extends Controller
         return $response;
     }
 
+    /**
+     * @return \yii\console\Response|Response
+     * @throws \yii\web\HttpException
+     */
+    public function actionComplaints()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $requestUrl = Yii::$app->params['elastic_service_url'] . '/rest-api/v1/complaints/search';
+        $queryString = Yii::$app->request->getQueryString();
+        $queryString = $queryString ? "?" . $queryString : "";
+
+        $response = Yii::$app->response;
+        $response->format = Response::FORMAT_JSON;
+        $result = Curl::sendRequest($requestUrl . $queryString, "GET");
+        $response->content = $result['body'];
+        return $response;
+    }
+
+    /**
+     * @return \yii\console\Response|Response
+     * @throws \yii\web\HttpException
+     */
+    public function actionDecisions()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $requestUrl = Yii::$app->params['elastic_service_url'] . '/rest-api/v1/decisions/search';
+        $queryString = Yii::$app->request->getQueryString();
+        $queryString = $queryString ? "?" . $queryString : "";
+
+        $response = Yii::$app->response;
+        $response->format = Response::FORMAT_JSON;
+        $result = Curl::sendRequest($requestUrl . $queryString, "GET");
+        $response->content = $result['body'];
+        return $response;
+    }
 }
