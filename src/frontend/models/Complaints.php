@@ -26,7 +26,7 @@ class Complaints extends Model
      */
     public static function request($type, $offset)
     {
-        $params = ['q' => '*:*', 'wt' => 'json', 'rows' => 30, 'sort' => 'timestamp asc'];
+        $params = ['q' => '*:*', 'wt' => 'json', 'rows' => 300, 'sort' => 'timestamp asc'];
 
         if ($offset) {
             $params['fq'] = "timestamp:[{$offset} TO NOW]";
