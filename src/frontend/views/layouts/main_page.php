@@ -45,6 +45,7 @@ use frontend\helpers\File;
         <link href="/js/Error.js" rel="prefetch">
 
         <link href="/css/app.css" rel="preload" as="style">
+        <link href=/css/TenderPage.css rel=prefetch>
 
         <link href="/js/app.js" rel="preload" as="script">
         <link href="/js/chunk-vendors.js" rel="preload" as="script">
