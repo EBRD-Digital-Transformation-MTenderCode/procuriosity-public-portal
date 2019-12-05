@@ -97,7 +97,7 @@ $this->registerJsFile(File::getNameWithCreatedTime('/js/static/main.js'));
                     <?php foreach (News::getLastItems() as $item):?>
                     <div class="main-news__card"><img src="/uploads/news/ico/<?=$item->image?>" alt="<?=Html::encode($item->title)?>" class="main-news__img">
                         <div class="main-news__text">
-                            <?=StringHelper::truncate(strip_tags($item->body), 360)?>
+                            <?=StringHelper::truncate($item->body, 360)?>
                         </div>
                     </div>
                     <?php endforeach;?>
