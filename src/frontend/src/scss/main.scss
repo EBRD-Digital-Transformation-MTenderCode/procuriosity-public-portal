@@ -233,6 +233,14 @@
     &__text {
       line-height: 1.65;
       font-size: 13px;
+
+      a {
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
   &-about {
