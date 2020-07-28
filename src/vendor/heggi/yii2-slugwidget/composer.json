@@ -1,0 +1,22 @@
+{
+    "name": "heggi/yii2-slugwidget",
+    "description": "Widget for autogeneration slug",
+    "type": "yii2-extension",
+    "keywords": ["yii2","widget","slug"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Heggi",
+            "email": "heggi@fhead.org"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/speakingurl": "^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "heggi\\slugwidget\\": ""
+        }
+    }
+}

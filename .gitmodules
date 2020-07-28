@@ -1,0 +1,3 @@
+[submodule "ustudio/service_mandatory"]
+	path = src/vendor/ustudio/service_mandatory
+	url = https://bitbucket.org/ustudio-llc/service_mandatory_parts-composer_package.git
